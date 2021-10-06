@@ -1,7 +1,7 @@
 const Button = () => {
     return (
         <div className="button__container">
-            <a href="http://">Contact Me</a>
+            <a href="/">Contact Me</a>
         </div>
     )
 }
