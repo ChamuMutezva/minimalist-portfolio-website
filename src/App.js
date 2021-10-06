@@ -1,10 +1,13 @@
-import './App.css';
+import './Sass/App.scss';
+import Button from './Components/Button';
+import Header from './Components/Header';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <h1>Minimalist portfolio website</h1>
+        <Header />
+        <Button />
       </header>
     </div>
   );
