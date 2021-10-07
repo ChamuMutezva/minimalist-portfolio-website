@@ -6,9 +6,9 @@ const Header = () => {
         console.log('button')
     }
     return (
-        <header>
+        <header className="header">
             <div className="logo__container">
-                <img src={Logo} alt="my frontend portfolio" />
+                <img className="logo"src={Logo} alt="my frontend portfolio" />
             </div>
             <nav>
                 {/*Opening and closing the menu */}
@@ -39,7 +39,7 @@ const Header = () => {
                 {/* ---------------------------------*/}
 
                 {/*Modal and navigation list items*/}
-                <div className={`modal__container}`}>
+                <div className={`modal__container hide__modal`}>
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/">Portfolio</a></li>

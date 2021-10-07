@@ -1,14 +1,11 @@
 import './Sass/App.scss';
-import Button from './Components/Button';
+//import Button from './Components/Button';
 import Header from './Components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header />
-        <Button />
-      </header>
+    <div className="App">      
+        <Header />      
     </div>
   );
 }

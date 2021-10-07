@@ -21,9 +21,9 @@ dd {
 
 /* Remove list styles on ul,
 ol elements with a list role,
-which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+which suggests default styling will be removed */ 
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -75,54 +75,11 @@ select {
   }
 
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-.header {
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.hide__btn {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.modal__container {
-  position: absolute;
-  top: 4rem;
-  left: 0;
-  z-index: 1;
-  padding-top: 4rem;
-  padding-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: first baseline;
-  justify-content: space-between;
-}
-
-.hide__modal {
-  display: none;
-}
-
-.show__menu {
-  background: none;
-  border: none;
-}
-
-h1 {
-  font-family: "Ibarra Real Nova", serif;
-}
-
-body {
-  font-family: "Public Sans", sans-serif;
 }

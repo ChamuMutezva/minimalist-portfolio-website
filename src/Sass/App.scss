@@ -1,1 +1,10 @@
-@use './Utils';
+@use "./Base";
+@use "./Utils";
+@use "./Components";
+@use "./Layouts";
+h1 {
+  font-family: "Ibarra Real Nova", serif;
+}
+body {
+  font-family: "Public Sans", sans-serif;
+}
