@@ -1,31 +1,74 @@
 .header {
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (min-width: 42.5rem) {
+    padding-top: 4.5rem;
+  }
 }
 .hide__btn {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
 .modal__container {
-    position: absolute;
-    top: 4rem;
-    left: 0;   
-    z-index: 1;
-    padding-top: 4rem;
-    padding-left: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: first baseline;
-    justify-content: space-between;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  z-index: 1;
+  padding-top: 4rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: space-between;
+  @media screen and (min-width: 42.5rem) {
+    position: relative;
+    top: 0;
+    padding-top: 0;
+    padding-left: 0;
+    flex-direction: row;
+  }
 }
+
 .hide__modal {
-    display: none;
+  display: none;
+  @media screen and (min-width: 42.5rem) {
+    display: flex;
+  }
 }
-.show__menu {
-    background: none;
-    border: none;
+
+.show__menu,
+.close__menu {
+  background: none;
+  border: none;
+}
+
+.menu__control {
+  @media screen and (min-width: 42.5rem) {
+    display: none;
+  }
+}
+
+.nav {
+  @media screen and (min-width: 42.5rem) {
+    flex: 1 1 40%;
+  }
+}
+
+.logo__container {
+  @media screen and (min-width: 42.5rem) {
+    flex: 1 1 60%;
+  }
+}
+
+.nav__list__items {
+  @media screen and (min-width: 42.5rem) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }

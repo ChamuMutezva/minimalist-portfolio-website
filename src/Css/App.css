@@ -87,7 +87,12 @@ select {
   padding: 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+}
+@media screen and (min-width: 42.5rem) {
+  .header {
+    padding-top: 4.5rem;
+  }
 }
 
 .hide__btn {
@@ -109,14 +114,55 @@ select {
   align-items: first baseline;
   justify-content: space-between;
 }
+@media screen and (min-width: 42.5rem) {
+  .modal__container {
+    position: relative;
+    top: 0;
+    padding-top: 0;
+    padding-left: 0;
+    flex-direction: row;
+  }
+}
 
 .hide__modal {
   display: none;
 }
+@media screen and (min-width: 42.5rem) {
+  .hide__modal {
+    display: flex;
+  }
+}
 
-.show__menu {
+.show__menu,
+.close__menu {
   background: none;
   border: none;
+}
+
+@media screen and (min-width: 42.5rem) {
+  .menu__control {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 42.5rem) {
+  .nav {
+    flex: 1 1 40%;
+  }
+}
+
+@media screen and (min-width: 42.5rem) {
+  .logo__container {
+    flex: 1 1 60%;
+  }
+}
+
+@media screen and (min-width: 42.5rem) {
+  .nav__list__items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 h1 {

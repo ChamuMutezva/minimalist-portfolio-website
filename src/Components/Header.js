@@ -1,16 +1,24 @@
+import { useState } from 'react'
 import Logo from '../images/logo.svg'
 import Hamburger from '../images/icons/hamburger.svg'
 import Close from '../images/icons/close.svg'
 const Header = () => {
-    const handleClick = () => {
-        console.log('button')
+    const [menu, setMenu] = useState(true)
+    const handleClick = (evt) => {
+        const btn = document.querySelector(".show__menu")
+        const closeBtn = document.querySelector(".close__menu")
+        closeBtn.classList.toggle("hide__btn")
+        btn.classList.toggle("hide__btn")
+        setMenu(!menu)
+
     }
+
     return (
         <header className="header">
             <div className="logo__container">
-                <img className="logo"src={Logo} alt="my frontend portfolio" />
+                <img className="logo" src={Logo} alt="my frontend portfolio" />
             </div>
-            <nav>
+            <nav className="nav" aria-label="main navigation">
                 {/*Opening and closing the menu */}
                 <div className="menu__control">
                     <button className="show__menu"
@@ -39,11 +47,11 @@ const Header = () => {
                 {/* ---------------------------------*/}
 
                 {/*Modal and navigation list items*/}
-                <div className={`modal__container hide__modal`}>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/">Portfolio</a></li>
-                        <li><a href="/">Contact me</a></li>
+                <div className={`modal__container ${menu ? "hide__modal" : ""} `}>
+                    <ul className="nav__list__items">
+                        <li className="nav__list__item"><a href="/">Home</a></li>
+                        <li className="nav__list__item"><a href="/">Portfolio</a></li>
+                        <li className="nav__list__item"><a href="/">Contact me</a></li>
                     </ul>
                 </div>
             </nav>
