@@ -1,0 +1,27 @@
+@use '../Utils';
+
+.btn {
+    background: Utils.$dark-blue;
+    display: flex;
+    max-width: 12.5rem;
+    text-decoration: none;
+}
+
+.arrows__img__holder {
+    flex: 1 1 30%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.arrows__img {
+    padding: 1rem;
+}
+
+span.btn__text {
+    flex: 1 1 70%;
+    align-self: center;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}

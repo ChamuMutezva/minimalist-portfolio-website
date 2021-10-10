@@ -83,6 +83,83 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.btn {
+  background: #20394c;
+  display: flex;
+  max-width: 12.5rem;
+  text-decoration: none;
+}
+
+.arrows__img__holder {
+  flex: 1 1 30%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrows__img {
+  padding: 1rem;
+}
+
+span.btn__text {
+  flex: 1 1 70%;
+  align-self: center;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero__img {
+  margin: auto;
+  width: 100%;
+}
+
+.hero__content {
+  position: relative;
+}
+@media screen and (min-width: 42.5rem) {
+  .hero__content {
+    top: -18.8rem;
+    background-color: white;
+    width: 73%;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .hero__content {
+    top: -23.5rem;
+    width: 40%;
+    left: -1px;
+  }
+}
+
+.hero__content__title {
+  color: #33323e;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding-top: 3.5rem;
+  padding-bottom: 1.2rem;
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.36px;
+  line-height: 1.1;
+}
+@media screen and (min-width: 42.5rem) {
+  .hero__content__title {
+    padding-right: 2.5rem;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .hero__content__title {
+    font-size: 3.125rem;
+  }
+}
+
 .header {
   padding: 2rem;
   display: flex;
@@ -91,7 +168,12 @@ select {
 }
 @media screen and (min-width: 42.5rem) {
   .header {
-    padding-top: 4.5rem;
+    padding: 4.5rem 2.5rem 2rem;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .header {
+    padding: 4.5rem 10.3125rem 2rem;
   }
 }
 
@@ -162,6 +244,29 @@ select {
     width: 100%;
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.nav--item {
+  text-decoration: none;
+  color: #33323e;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.main {
+  padding: 0.5rem 2rem;
+  margin: auto;
+}
+@media screen and (min-width: 42.5rem) {
+  .main {
+    padding: 0.5rem 2.5rem;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .main {
+    padding: 0.5rem 10.3125rem;
   }
 }
 

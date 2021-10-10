@@ -47,11 +47,11 @@ const Header = () => {
                 {/* ---------------------------------*/}
 
                 {/*Modal and navigation list items*/}
-                <div className={`modal__container ${menu ? "hide__modal" : ""} `}>
+                <div className={`modal__container ${menu ? "hide__modal" : ""}`}>
                     <ul className="nav__list__items">
-                        <li className="nav__list__item"><a href="/">Home</a></li>
-                        <li className="nav__list__item"><a href="/">Portfolio</a></li>
-                        <li className="nav__list__item"><a href="/">Contact me</a></li>
+                        <li className="nav__list__item"><a className="nav--item" href="/">Home</a></li>
+                        <li className="nav__list__item"><a className="nav--item" href="/">Portfolio</a></li>
+                        <li className="nav__list__item"><a className="nav--item" href="/">Contact me</a></li>
                     </ul>
                 </div>
             </nav>
