@@ -12,8 +12,9 @@
     background-color: black;
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
+
 .arrows__img {
     padding: 1rem;
 }
@@ -24,4 +25,15 @@ span.btn__text {
     text-align: center;
     color: white;
     text-decoration: none;
+}
+
+.nav__shared--btn {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border: 1px solid Utils.$grayish-dark-blue;
+    color: Utils.$grayish-dark-blue;
+    padding: 0.6rem 1.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: Utils.calculateRem(12);
 }

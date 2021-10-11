@@ -1,12 +1,13 @@
+@use '../Utils';
 .main {
     padding: 0.5rem 2rem;
     margin: auto;
 
-    @media screen and (min-width: 42.5rem) {
+    @include Utils.mQ(42.5rem) {  
         padding: 0.5rem 2.5rem;
     }
 
-    @media screen and (min-width: 67.5rem) {
+    @include Utils.mQ(67.5rem) {  
         padding: 0.5rem 10.3125rem;
     }
 }

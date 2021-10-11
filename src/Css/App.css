@@ -110,6 +110,17 @@ span.btn__text {
   text-decoration: none;
 }
 
+.nav__shared--btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #33323e;
+  color: #33323e;
+  padding: 0.6rem 1.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+
 .hero {
   position: relative;
 }

@@ -3,7 +3,7 @@
 .about__me {
     padding-top: 4.9rem;
 
-    @media screen and (min-width: 42.5rem) {
+    @include Utils.mQ(42.5rem) {    
         display: flex;
         padding-top: 6rem;
     }
@@ -21,7 +21,7 @@
 .about__content {
     flex: 1 1 60%;
 
-    @media screen and (min-width: 42.5rem) {
+    @include Utils.mQ(42.5rem) {  
         display: flex;
         justify-content: flex-end;
     }
@@ -33,7 +33,7 @@
 }
 
 .about__content__holder {
-    @media screen and (min-width: 42.5rem) {
+    @include Utils.mQ(42.5rem) {  
         position: relative;
         display: flex;
         flex-direction: column;

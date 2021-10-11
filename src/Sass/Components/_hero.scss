@@ -12,14 +12,14 @@
 .hero__content {
     position: relative;
 
-    @media screen and (min-width: 42.5rem) {
+    @include Utils.mQ(42.5rem) {  
         position: absolute;
         bottom: 0;
         background-color: white;
         width: 73%;
     }
 
-    @media screen and (min-width: 67.5rem) {       
+    @include Utils.mQ(67.5rem) {        
         width: 40%;
         left: -1px;
     }
@@ -36,12 +36,12 @@
     letter-spacing: -0.36px;
     line-height: 1.1;
 
-    @media screen and (min-width: 42.5rem) {
+    @include Utils.mQ(42.5rem) {  
         padding-right: 2.5rem;
         padding-top: 2rem;
     }
 
-    @media screen and (min-width: 67.5rem) {
+    @include Utils.mQ(67.5rem) {  
        font-size: 3.125rem;
     }
 }
