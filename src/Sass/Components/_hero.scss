@@ -13,13 +13,13 @@
     position: relative;
 
     @media screen and (min-width: 42.5rem) {
-        top: -18.8rem;
+        position: absolute;
+        bottom: 0;
         background-color: white;
         width: 73%;
     }
 
-    @media screen and (min-width: 67.5rem) {
-        top: -23.5rem;
+    @media screen and (min-width: 67.5rem) {       
         width: 40%;
         left: -1px;
     }
@@ -28,8 +28,7 @@
 .hero__content__title {
     color: Utils.$grayish-dark-blue;
     margin-top: 1rem;
-    margin-bottom: 2rem;
-    padding-top: 3.5rem;
+    margin-bottom: 2rem;   
     padding-bottom: 1.2rem;
     text-align: left;
     font-size: 2.5rem;
@@ -39,6 +38,7 @@
 
     @media screen and (min-width: 42.5rem) {
         padding-right: 2.5rem;
+        padding-top: 2rem;
     }
 
     @media screen and (min-width: 67.5rem) {

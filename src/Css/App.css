@@ -124,14 +124,14 @@ span.btn__text {
 }
 @media screen and (min-width: 42.5rem) {
   .hero__content {
-    top: -18.8rem;
+    position: absolute;
+    bottom: 0;
     background-color: white;
     width: 73%;
   }
 }
 @media screen and (min-width: 67.5rem) {
   .hero__content {
-    top: -23.5rem;
     width: 40%;
     left: -1px;
   }
@@ -141,7 +141,6 @@ span.btn__text {
   color: #33323e;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  padding-top: 3.5rem;
   padding-bottom: 1.2rem;
   text-align: left;
   font-size: 2.5rem;
@@ -152,12 +151,78 @@ span.btn__text {
 @media screen and (min-width: 42.5rem) {
   .hero__content__title {
     padding-right: 2.5rem;
+    padding-top: 2rem;
   }
 }
 @media screen and (min-width: 67.5rem) {
   .hero__content__title {
     font-size: 3.125rem;
   }
+}
+
+.about__me {
+  padding-top: 4.9rem;
+}
+@media screen and (min-width: 42.5rem) {
+  .about__me {
+    display: flex;
+    padding-top: 6rem;
+  }
+}
+
+.about__img {
+  width: 100%;
+  margin: auto;
+}
+
+.about__img__container {
+  flex: 1 1 40%;
+}
+
+.about__content {
+  flex: 1 1 60%;
+}
+@media screen and (min-width: 42.5rem) {
+  .about__content {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.about__content__title {
+  font-size: 2.5rem;
+  color: #33323e;
+}
+
+@media screen and (min-width: 42.5rem) {
+  .about__content__holder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 82%;
+    padding-top: 2.5rem;
+  }
+  .about__content__holder::before, .about__content__holder::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #33323e;
+    left: 0;
+  }
+  .about__content__holder::before {
+    top: 0;
+  }
+  .about__content__holder::after {
+    bottom: 0;
+  }
+}
+
+.about__content__content {
+  font-size: 1rem;
+  color: #33323e;
+  margin-top: 1rem;
+  line-height: 1.92;
 }
 
 .header {
@@ -270,7 +335,8 @@ span.btn__text {
   }
 }
 
-h1 {
+h1,
+h2 {
   font-family: "Ibarra Real Nova", serif;
 }
 

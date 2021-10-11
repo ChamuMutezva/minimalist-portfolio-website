@@ -2,9 +2,12 @@
 @use "./Utils";
 @use "./Components";
 @use "./Layouts";
-h1 {
+
+h1,
+h2 {
   font-family: "Ibarra Real Nova", serif;
 }
+
 body {
   font-family: "Public Sans", sans-serif;
 }
