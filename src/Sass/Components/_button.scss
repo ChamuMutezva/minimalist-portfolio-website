@@ -28,12 +28,14 @@ span.btn__text {
 }
 
 .nav__shared--btn {
-    display: inline-block;
-    padding: .5rem 1rem;
+    display: inline-block;   
     border: 1px solid Utils.$grayish-dark-blue;
     color: Utils.$grayish-dark-blue;
-    padding: 0.6rem 1.8rem;
+    max-width: 12.625rem;
+    padding: 0.7rem 1.8rem;
     text-transform: uppercase;
     text-decoration: none;
     font-size: Utils.calculateRem(12);
+    letter-spacing: 2px;
+    text-align: center;
 }

@@ -3,7 +3,7 @@
 .about__me {
     padding-top: 4.9rem;
 
-    @include Utils.mQ(42.5rem) {    
+    @include Utils.mQ(42.5rem) {
         display: flex;
         padding-top: 6rem;
     }
@@ -19,44 +19,49 @@
 }
 
 .about__content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     flex: 1 1 60%;
 
-    @include Utils.mQ(42.5rem) {  
+    @include Utils.mQ(42.5rem) {
         display: flex;
         justify-content: flex-end;
     }
 }
 
 .about__content__title {
+    padding-top: 1.5rem;
     font-size: 2.5rem;
     color: Utils.$grayish-dark-blue;
 }
 
 .about__content__holder {
-    @include Utils.mQ(42.5rem) {  
-        position: relative;
+    position: relative;
+    padding-bottom: 3rem;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #979797;
+        left: 0;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    @include Utils.mQ(42.5rem) {
         display: flex;
         flex-direction: column;
         width: 82%;
         padding-top: 2.5rem;
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background-color: Utils.$grayish-dark-blue;
-            left: 0;
-        }
-
-        &::before {
-            top: 0;
-        }
-
-        &::after {
-            bottom: 0;
-        }
     }
 }
 
@@ -64,5 +69,6 @@
     font-size: 1rem;
     color: Utils.$grayish-dark-blue;
     margin-top: 1rem;
-    line-height: 1.92;
+    margin-bottom: 2rem;
+    line-height: 1.92;   
 }

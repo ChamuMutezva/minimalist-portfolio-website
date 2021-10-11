@@ -1,6 +1,7 @@
 import AboutMeMobile from '../images/homepage/mobile/image-homepage-profile.jpg'
 import AboutMeTablet from '../images/homepage/tablet/image-homepage-profile.jpg'
 import AboutMeDesktop from '../images/homepage/desktop/image-homepage-profile.jpg'
+import NavButton from './NavButton'
 const AboutMe = () => {
     return (
         <div className="about__me">
@@ -27,9 +28,7 @@ const AboutMe = () => {
                         I love being out in nature whether that’s going for a walk, run or cycling. I’d love
                         you to check out my work.
                     </p>
-                    <a className="nav__shared--btn" href="/">
-                        go to portfolio
-                    </a>
+                    <NavButton title="go to portfolio" />
                 </div>
             </div>
         </div>
