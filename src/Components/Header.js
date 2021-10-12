@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Logo from '../images/logo.svg'
 import Hamburger from '../images/icons/hamburger.svg'
 import Close from '../images/icons/close.svg'
@@ -49,9 +50,9 @@ const Header = () => {
                 {/*Modal and navigation list items*/}
                 <div className={`modal__container ${menu ? "hide__modal" : ""}`}>
                     <ul className="nav__list__items">
-                        <li className="nav__list__item"><a className="nav--item" href="/">Home</a></li>
-                        <li className="nav__list__item"><a className="nav--item" href="/">Portfolio</a></li>
-                        <li className="nav__list__item"><a className="nav--item" href="/">Contact me</a></li>
+                        <li className="nav__list__item"><Link to="/" className="nav--item">Home</Link></li>
+                        <li className="nav__list__item"><Link to="/Portfolio" className="nav--item" href="/">Portfolio</Link></li>
+                        <li className="nav__list__item"><Link to="/ContactPage" className="nav--item" href="/">Contact me</Link></li>
                     </ul>
                 </div>
             </nav>
