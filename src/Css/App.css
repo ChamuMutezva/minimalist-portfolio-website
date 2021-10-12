@@ -385,6 +385,20 @@ span.btn__text {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
 }
+@media screen and (min-width: 42.5rem) {
+  .footer__container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem 2rem;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .footer__container {
+    max-width: 69.375rem;
+    margin: auto;
+  }
+}
 
 .footer__logo,
 .social__icons {
@@ -397,17 +411,49 @@ span.btn__text {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 42.5rem) {
+  .footer__nav__list__items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
 .footer__nav__list__item {
   text-align: center;
 }
 .footer__nav__list__item:not(:last-child) {
   margin-bottom: 1.4rem;
 }
+@media screen and (min-width: 42.5rem) {
+  .footer__nav__list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
 
 .social__list__items {
   display: flex;
   align-items: center;
   gap: 1.4rem;
+}
+
+@media screen and (min-width: 42.5rem) {
+  .footer__logo__container {
+    flex: 1 1 10%;
+  }
+}
+
+@media screen and (min-width: 42.5rem) {
+  .footer__nav {
+    flex: 1 1 70%;
+  }
+}
+
+@media screen and (min-width: 42.5rem) {
+  .social__list {
+    flex: 1 1 20%;
+  }
 }
 
 h1,

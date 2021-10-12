@@ -13,6 +13,19 @@
     gap: 2.2rem;
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+
+    @include Utils.mQ(42.5rem) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 3.5rem 2rem;
+    }
+
+    @include Utils.mQ(67.5rem) {
+        // padding: 0.5rem 10.3125rem;
+        max-width: 69.375rem;
+        margin: auto;
+    }
 }
 
 .footer__logo,
@@ -26,10 +39,26 @@
     text-transform: uppercase;
 }
 
+.footer__nav__list__items {
+    @include Utils.mQ(42.5rem) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3rem;
+    }
+}
+
 .footer__nav__list__item {
     text-align: center;
+
     &:not(:last-child) {
         margin-bottom: 1.4rem;
+    }
+
+    @include Utils.mQ(42.5rem) {
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -37,4 +66,22 @@
     display: flex;
     align-items: center;
     gap: 1.4rem;
+}
+
+.footer__logo__container {
+    @include Utils.mQ(42.5rem) {
+        flex: 1 1 10%;
+    }
+}
+
+.footer__nav {
+    @include Utils.mQ(42.5rem) {
+        flex: 1 1 70%;
+    }
+}
+
+.social__list {
+    @include Utils.mQ(42.5rem) {
+        flex: 1 1 20%;
+    }
 }

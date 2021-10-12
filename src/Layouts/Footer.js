@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer__container">
-                <div className="logo__container">
+                <div className="logo__container footer__logo__container">
                     <img className="footer__logo" src={Logo} alt="my frontend portfolio" />
                 </div>
                 <nav className="footer__nav">
