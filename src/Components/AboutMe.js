@@ -28,7 +28,7 @@ const AboutMe = () => {
                         I love being out in nature whether that’s going for a walk, run or cycling. I’d love
                         you to check out my work.
                     </p>
-                    <NavButton title="go to portfolio" />
+                    <NavButton title="go to portfolio" href="/" />
                 </div>
             </div>
         </div>
