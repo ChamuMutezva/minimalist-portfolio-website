@@ -83,6 +83,19 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.sr__only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* added line */
+  border: 0;
+}
+
 .btn {
   background: #20394c;
   display: flex;
@@ -465,6 +478,26 @@ span.btn__text {
   .social__list {
     flex: 1 1 20%;
   }
+}
+
+.project__title {
+  padding-top: 1.5rem;
+  font-size: 2.5rem;
+  color: #33323e;
+}
+
+.project__content {
+  font-size: 1rem;
+  color: #33323e;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.92;
+}
+
+.projects__lists {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 h1,

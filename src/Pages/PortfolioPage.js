@@ -33,10 +33,11 @@ const PortfolioPage = () => {
     console.log(data)
 
     return (
-        <main>
+        <main className="main" >
             <h1 className="sr__only">List of projects completed</h1>
+            <ul className="projects__lists" >
             {data.map(item => {
-                return <li key={item.id}>
+                return <li className="project__list__item" key={item.id}>
                     <picture>
                         <source media="(min-width: 1080px)"
                             srcSet={item.images.desktop[1]} />
@@ -45,8 +46,8 @@ const PortfolioPage = () => {
                         <img className="hero__img" src={item.images.mobile[1]} alt="" />
                     </picture>
                     <div className="project__details">
-                        <h2>{item.project}</h2>
-                        <p>{item.description}</p>                        
+                        <h2 className="project__title">{item.project}</h2>
+                        <p className="project__content">{item.description}</p>                        
                     </div>
                     <NavButton title="view project"
                         href={item.website}
@@ -54,6 +55,7 @@ const PortfolioPage = () => {
                         rel="noreferrer" />
                 </li>
             })}
+            </ul>
         </main>
     )
 }
