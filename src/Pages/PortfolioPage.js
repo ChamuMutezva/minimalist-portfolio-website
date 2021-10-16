@@ -1,35 +1,10 @@
-import { useEffect, useState } from "react"
-import axios from "axios"
+//import { Link } from "react-router-dom"
+import { useContext } from "react"
+import { DataContext } from "./DataContext"
 import NavButton from "../Components/NavButton"
-
 const PortfolioPage = () => {
-    const [data, setData] = useState([])
-
-    //get data from json api
-    const getData = async () => {
-        await axios.get('data.json', {
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-        }
-        )
-
-            .then(function (response) {
-                console.log(response.data)
-                return response.data;
-            })
-
-            .then(function (myJson) {
-                setData(myJson)
-            });
-
-    }
-
-    useEffect(() => {
-        getData()
-    }, [])
-
+    //let match = useRouteMatch();
+    const { data } = useContext(DataContext)
     console.log(data)
 
     return (
@@ -50,9 +25,9 @@ const PortfolioPage = () => {
                                 <h2 className="project__title">{item.project}</h2>
                                 <p className="project__content">{item.description}</p>
                                 <NavButton title="view project"
-                                    href={item.website}
-                                    target="_blank"
-                                    rel="noreferrer" />
+                                    href={`/details/:${item.id}`}
+                                />
+
                             </div>
                         </div>
 

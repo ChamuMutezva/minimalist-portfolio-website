@@ -1,17 +1,11 @@
 @use '../Utils';
 
 .project__title {
-    padding-top: 1.5rem;
-    font-size: 2.5rem;
-    color: #33323e;
+    @include Utils.headings;
 }
 
 .project__content {
-    font-size: 1rem;
-    color: #33323e;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    line-height: 1.92;
+    @include Utils.mainContent;
 }
 
 .projects__lists {
@@ -22,7 +16,10 @@
     @include Utils.mQ(42.5rem) {
         margin-top: 3rem;
         gap: 3.5rem;
+    }
 
+    @include Utils.mQ(67.5rem) {        
+        gap: 5.5rem;
     }
 }
 
@@ -42,7 +39,7 @@
 
 }
 
-.project__details { 
+.project__details {
 
     @include Utils.mQ(42.5rem) {
         flex: 1 1 50%;
@@ -55,6 +52,8 @@
     border-top: 1px solid Utils.$medium-grey;
     border-bottom: 1px solid Utils.$medium-grey;
     height: 100%;
+    max-width: 350px;
+    margin: auto;
 }
 
 .project__img__container {

@@ -1,0 +1,30 @@
+@use '../Utils';
+
+.details__content {
+	margin-top: 2rem;
+}
+
+.details__content__title {
+    @include Utils.headings;
+}
+
+.details__content__content {
+    @include Utils.mainContent;
+}
+
+.details__techs__summary {
+	display: flex;
+	flex-direction: column;
+    font-size: Utils.calculateRem(13);
+    color: Utils.$cyan;
+    margin-bottom: 2rem;
+}
+
+.details__more {
+    margin-top: 3rem;
+}
+
+.details__more--title {
+    font-size: Utils.calculateRem(32);
+    font-weight: 300;
+}

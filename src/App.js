@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './Sass/App.scss';
-//import Button from './Components/Button';
+import { DataProvider } from './Pages/DataContext';
 import Header from './Components/Header';
 import Footer from './Layouts/Footer';
 import HomePage from './Pages/HomePage';
 import PortfolioPage from './Pages/PortfolioPage';
 import ContactPage from './Pages/ContactPage';
 import Aside from './Layouts/Aside';
+import DetailsPage from './Pages/Details';
 
 function App() {
   return (
@@ -17,14 +18,20 @@ function App() {
           <Route exact path="/">
             <HomePage />
           </Route>
-          <Route path="/PortfolioPage">
-            <PortfolioPage />
-          </Route>
+          <DataProvider>
+            <Route path="/PortfolioPage">
+              <PortfolioPage />
+            </Route>
+            <Route path="/Details">
+              <DetailsPage />
+            </Route>
+          </DataProvider>
           <Route path="/ContactPage">
             <ContactPage />
           </Route>
+
         </Switch>
-      <Aside />
+        <Aside />
         <Footer />
       </Router>
     </div>

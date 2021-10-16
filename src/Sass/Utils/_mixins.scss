@@ -1,6 +1,20 @@
 //media query control
 @mixin mQ($arg) {
-    @media screen and (min-width: $arg) {
-      @content;
-    }
+  @media screen and (min-width: $arg) {
+    @content;
   }
+}
+
+@mixin headings {
+  padding-top: 1.5rem;
+  font-size: 2.5rem;
+  color: #33323e;
+}
+
+@mixin mainContent {
+  font-size: 1rem;
+  color: #33323e;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.92;
+}
