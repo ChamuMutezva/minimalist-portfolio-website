@@ -6,6 +6,7 @@ import Footer from './Layouts/Footer';
 import HomePage from './Pages/HomePage';
 import PortfolioPage from './Pages/PortfolioPage';
 import ContactPage from './Pages/ContactPage';
+import Aside from './Layouts/Aside';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <ContactPage />
           </Route>
         </Switch>
+      <Aside />
         <Footer />
       </Router>
     </div>

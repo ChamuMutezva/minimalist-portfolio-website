@@ -20,9 +20,42 @@
                 "./images/portfolio/desktop/image-portfolio-manage.jpg",
                 "./images/portfolio/desktop/image-portfolio-manage@2x.jpg"
             ]
+        },
+        "preview": {
+            "mobile": [
+                "./images/detail/mobile/image-manage-preview-1.jpg",
+                "./images/detail/mobile/image-manage-preview-1@2x.jpg",
+                "./images/detail/mobile/image-manage-preview-2.jpg",
+                "./images/detail/mobile/image-manage-preview-2@2x.jpg"
+            ],
+            "tablet": [
+                "./images/detail/tablet/image-manage-preview-1.jpg",
+                "./images/detail/tablet/image-manage-preview-1@2x.jpg",
+                "./images/detail/tablet/image-manage-preview-2.jpg",
+                "./images/detail/tablet/image-manage-preview-2@2x.jpg"
+            ],
+            "desktop": [
+                "./images/detail/desktop/image-manage-preview-1.jpg",
+                "./images/detail/desktop/image-manage-preview-1@2x.jpg",
+                "./images/detail/desktop/image-manage-preview-2.jpg",
+                "./images/detail/desktop/image-manage-preview-2@2x.jpg"
+            ]
+        },
+        "heroes": {
+            "mobile": [
+                "./images/detail/mobile/image-manage-hero.jpg",
+                "./images/detail/mobile/image-manage-hero@2x.jpg"
+            ],
+            "tablet": [
+                "./images/detail/tablet/image-manage-hero.jpg",
+                "./images/detail/tablet/image-manage-hero@2x.jpg"
+            ],
+            "desktop": [
+                "./images/detail/desktop/image-manage-hero.jpg",
+                "./images/detail/desktop/image-manage-hero@2x.jpg"
+            ]
         }
-        
-    }, 
+    },
     {
         "id": 2,
         "project": "Bookmark",
@@ -44,12 +77,46 @@
                 "./images/portfolio/desktop/image-portfolio-bookmark.jpg",
                 "./images/portfolio/desktop/image-portfolio-bookmark@2x.jpg"
             ]
+        },
+        "preview": {
+            "mobile": [
+                "./images/detail/mobile/image-bookmark-preview-1.jpg",
+                "./images/detail/mobile/image-bookmark-preview-1@2x.jpg",
+                "./images/detail/mobile/image-bookmark-preview-2.jpg",
+                "./images/detail/mobile/image-bookmark-preview-2@2x.jpg"
+            ],
+            "tablet": [
+                "./images/detail/tablet/image-bookmark-preview-1.jpg",
+                "./images/detail/tablet/image-bookmark-preview-1@2x.jpg",
+                "./images/detail/tablet/image-bookmark-preview-2.jpg",
+                "./images/detail/tablet/image-bookmark-preview-2@2x.jpg"
+            ],
+            "desktop": [
+                "./images/detail/desktop/image-bookmark-preview-1.jpg",
+                "./images/detail/desktop/image-bookmark-preview-1@2x.jpg",
+                "./images/detail/desktop/image-bookmark-preview-2.jpg",
+                "./images/detail/desktop/image-bookmark-preview-2@2x.jpg"
+            ]
+        },
+        "heroes": {
+            "mobile": [
+                "./images/detail/mobile/image-bookmark-hero.jpg",
+                "./images/detail/mobile/image-bookmark-hero@2x.jpg"
+            ],
+            "tablet": [
+                "./images/detail/tablet/image-bookmark-hero.jpg",
+                "./images/detail/tablet/image-bookmark-hero@2x.jpg"
+            ],
+            "desktop": [
+                "./images/detail/desktop/image-bookmark-hero.jpg",
+                "./images/detail/desktop/image-bookmark-hero@2x.jpg"
+            ]
         }
     },
     {
         "id": 3,
         "project": "Insure",
-        "title":"Interaction Design / Front End Development",
+        "title": "Interaction Design / Front End Development",
         "techs": "HTML / CSS / JS",
         "website": "https://insure-landing-rc.netlify.com/",
         "background": "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
@@ -67,6 +134,40 @@
                 "../images/portfolio/desktop/image-portfolio-insure.jpg",
                 "../images/portfolio/desktop/image-portfolio-insure@2x.jpg"
             ]
+        },
+        "preview": {
+            "mobile": [
+                "./images/detail/mobile/image-insure-preview-1.jpg",
+                "./images/detail/mobile/image-insure-preview-1@2x.jpg",
+                "./images/detail/mobile/image-insure-preview-2.jpg",
+                "./images/detail/mobile/image-insure-preview-2@2x.jpg"
+            ],
+            "tablet": [
+                "./images/detail/tablet/image-insure-preview-1.jpg",
+                "./images/detail/tablet/image-insure-preview-1@2x.jpg",
+                "./images/detail/tablet/image-insure-preview-2.jpg",
+                "./images/detail/tablet/image-insure-preview-2@2x.jpg"
+            ],
+            "desktop": [
+                "./images/detail/desktop/image-insure-preview-1.jpg",
+                "./images/detail/desktop/image-insure-preview-1@2x.jpg",
+                "./images/detail/desktop/image-insure-preview-2.jpg",
+                "./images/detail/desktop/image-insure-preview-2@2x.jpg"
+            ]
+        },
+        "heroes": {
+            "mobile": [
+                "./images/detail/mobile/image-insure-hero.jpg",
+                "./images/detail/mobile/image-insure-hero@2x.jpg"
+            ],
+            "tablet": [
+                "./images/detail/tablet/image-insure-hero.jpg",
+                "./images/detail/tablet/image-insure-hero@2x.jpg"
+            ],
+            "desktop": [
+                "./images/detail/desktop/image-insure-hero.jpg",
+                "./images/detail/desktop/image-insure-hero@2x.jpg"
+            ]
         }
     },
     {
@@ -83,41 +184,47 @@
                 "./images/portfolio/mobile/image-portfolio-fylo@2x.jpg"
             ],
             "tablet": [
-                "./images/portfolio/tablet/image-portfolio-insure.jpg",
-                "./images/portfolio/tablet/image-portfolio-insure@2x.jpg"
+                "./images/portfolio/tablet/image-portfolio-fylo.jpg",
+                "./images/portfolio/tablet/image-portfolio-fylo@2x.jpg"
             ],
             "desktop": [
-                "./images/portfolio/desktop/image-portfolio-insure.jpg",
-                "./images/portfolio/desktop/image-portfolio-insure@2x.jpg"
+                "./images/portfolio/desktop/image-portfolio-fylo.jpg",
+                "./images/portfolio/desktop/image-portfolio-fylo@2x.jpg"
+            ]
+        },
+        "preview": {
+            "mobile": [
+                "./images/detail/mobile/image-fylo-preview-1.jpg",
+                "./images/detail/mobile/image-fylo-preview-1@2x.jpg",
+                "./images/detail/mobile/image-fylo-preview-2.jpg",
+                "./images/detail/mobile/image-fylo-preview-2@2x.jpg"
+            ],
+            "tablet": [
+                "./images/detail/tablet/image-fylo-preview-1.jpg",
+                "./images/detail/tablet/image-fylo-preview-1@2x.jpg",
+                "./images/detail/tablet/image-fylo-preview-2.jpg",
+                "./images/detail/tablet/image-fylo-preview-2@2x.jpg"
+            ],
+            "desktop": [
+                "./images/detail/desktop/image-fylo-preview-1.jpg",
+                "./images/detail/desktop/image-fylo-preview-1@2x.jpg",
+                "./images/detail/desktop/image-fylo-preview-2.jpg",
+                "./images/detail/desktop/image-fylo-preview-2@2x.jpg"
+            ]
+        },
+        "heroes": {
+            "mobile": [
+                "./images/detail/mobile/image-fylo-hero.jpg",
+                "./images/detail/mobile/image-fylo-hero@2x.jpg"
+            ],
+            "tablet": [
+                "./images/detail/tablet/image-fylo-hero.jpg",
+                "./images/detail/tablet/image-fylo-hero@2x.jpg"
+            ],
+            "desktop": [
+                "./images/detail/desktop/image-fylo-hero.jpg",
+                "./images/detail/desktop/image-fylo-hero@2x.jpg"
             ]
         }
     }
-    
 ]
-
-
-
-  
-
-
-  
-
-  
-
- 
-
-
-
-  
-
- 
-
-  
-
- 
-
-  
-
-  
-
-  

@@ -500,6 +500,21 @@ span.btn__text {
   gap: 2.5rem;
 }
 
+.project__list__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 42.5rem) {
+  .project__list__item {
+    flex-direction: row;
+  }
+}
+
+.project__details {
+  border-top: 1px solid #33323e;
+}
+
 h1,
 h2,
 h3 {

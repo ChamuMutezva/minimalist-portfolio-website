@@ -1,3 +1,5 @@
+@use '../Utils';
+
 .project__title {
     padding-top: 1.5rem;
     font-size: 2.5rem;
@@ -16,4 +18,47 @@
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+
+    @include Utils.mQ(42.5rem) {
+        margin-top: 3rem;
+        gap: 3.5rem;
+
+    }
+}
+
+.project__list__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+
+    @include Utils.mQ(42.5rem) {
+        flex-direction: row;
+        align-items: stretch;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+
+}
+
+.project__details { 
+
+    @include Utils.mQ(42.5rem) {
+        flex: 1 1 50%;
+        // padding-bottom: 0;
+    }
+}
+
+.project__details__content {
+    padding-bottom: 2rem;
+    border-top: 1px solid Utils.$medium-grey;
+    border-bottom: 1px solid Utils.$medium-grey;
+    height: 100%;
+}
+
+.project__img__container {
+    @include Utils.mQ(42.5rem) {
+        flex: 1 1 50%;
+    }
 }
