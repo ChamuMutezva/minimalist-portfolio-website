@@ -1,20 +1,21 @@
 @use '../Utils';
 
 .details__content {
-	margin-top: 2rem;
+    margin-top: 2rem;
 }
 
 .details__content__title {
     @include Utils.headings;
 }
 
-.details__content__content {
+.details__content__content,
+.details__more__content {
     @include Utils.mainContent;
 }
 
 .details__techs__summary {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
     font-size: Utils.calculateRem(13);
     color: Utils.$cyan;
     margin-bottom: 2rem;
@@ -24,7 +25,27 @@
     margin-top: 3rem;
 }
 
-.details__more--title {
+.details__more--title,
+.details__preview__title {
     font-size: Utils.calculateRem(32);
-    font-weight: 300;
+    font-weight: 500;
+}
+
+.details__preview__img__container {
+    margin-bottom: 3rem;
+}
+
+.details__preview__title {
+    margin-bottom: 2rem;
+}
+
+.details__content__sub {
+	border-top: 1px solid Utils.$medium-grey;
+    border-bottom: 1px solid Utils.$medium-grey;
+    padding-bottom: 2.5rem;
+}
+
+.project__nav {
+	display: flex;
+	justify-content: space-between;
 }

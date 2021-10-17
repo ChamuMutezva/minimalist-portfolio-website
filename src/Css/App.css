@@ -557,7 +557,8 @@ span.btn__text {
   color: #33323e;
 }
 
-.details__content__content {
+.details__content__content,
+.details__more__content {
   font-size: 1rem;
   color: #33323e;
   margin-top: 1rem;
@@ -577,9 +578,29 @@ span.btn__text {
   margin-top: 3rem;
 }
 
-.details__more--title {
+.details__more--title,
+.details__preview__title {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 500;
+}
+
+.details__preview__img__container {
+  margin-bottom: 3rem;
+}
+
+.details__preview__title {
+  margin-bottom: 2rem;
+}
+
+.details__content__sub {
+  border-top: 1px solid #979797;
+  border-bottom: 1px solid #979797;
+  padding-bottom: 2.5rem;
+}
+
+.project__nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 h1,

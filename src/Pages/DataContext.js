@@ -16,8 +16,7 @@ export const DataProvider = (props) => {
         }
         )
 
-            .then(function (response) {
-                console.log(response.data)
+            .then(function (response) {               
                 return response.data;
             })
 
@@ -29,9 +28,7 @@ export const DataProvider = (props) => {
 
     useEffect(() => {
         getData()
-    }, [])
-
-    console.log(data)
+    }, [])    
 
     return <DataContext.Provider value={{ data }}>
         {props.children}

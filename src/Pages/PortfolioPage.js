@@ -1,11 +1,9 @@
-//import { Link } from "react-router-dom"
 import { useContext } from "react"
 import { DataContext } from "./DataContext"
 import NavButton from "../Components/NavButton"
 const PortfolioPage = () => {
     //let match = useRouteMatch();
-    const { data } = useContext(DataContext)
-    console.log(data)
+    const { data } = useContext(DataContext)  
 
     return (
         <main className="main" >

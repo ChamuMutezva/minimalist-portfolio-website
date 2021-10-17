@@ -2,6 +2,8 @@
     {
         "id": 1,
         "project": "Manage",
+        "next": "Bookmark",
+        "previous": "Fylo",
         "title": "Interaction Design / Front End Development",
         "techs": "HTML / CSS / JS",
         "website": "https://chamumutezva.github.io/manage-landing-page-master/",
@@ -59,6 +61,8 @@
     {
         "id": 2,
         "project": "Bookmark",
+        "next": "Insure",
+        "previous": "Manage",
         "title": "Interaction Design / Front End Development",
         "techs": "HTML / CSS / JS",
         "website": "https://chamumutezva.github.io/book-marking-landing-page/",
@@ -116,6 +120,8 @@
     {
         "id": 3,
         "project": "Insure",
+        "next": "Fylo",
+        "previous": "Bookmark",
         "title": "Interaction Design / Front End Development",
         "techs": "HTML / CSS / JS",
         "website": "https://insure-landing-rc.netlify.com/",
@@ -173,6 +179,8 @@
     {
         "id": 4,
         "project": "Fylo",
+        "next": "Manage",
+        "previous": "Insure",
         "title": "Interaction Design / Front End Development",
         "techs": "HTML / CSS",
         "website": "https://chamumutezva.github.io/FyloLandingPage2/",

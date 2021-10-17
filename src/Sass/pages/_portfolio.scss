@@ -42,8 +42,7 @@
 .project__details {
 
     @include Utils.mQ(42.5rem) {
-        flex: 1 1 50%;
-        // padding-bottom: 0;
+        flex: 1 1 50%;       
     }
 }
 
