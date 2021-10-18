@@ -3,7 +3,7 @@ const Aside = () => {
     return(
         <aside className="aside">
             <h3 className="aside__title">Interested in doing a project together?</h3>
-            <NavButton title="contact me" href="/" />
+            <NavButton title="contact me" href="/ContactPage" />
         </aside>
     )
 }

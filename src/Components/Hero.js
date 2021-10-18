@@ -18,7 +18,7 @@ const Hero = () => {
                 <h1 className="hero__content__title">
                     Hey, I’m Alex Spencer and I love building beautiful websites
                 </h1>
-                <a className="btn" href="/">
+                <a className="btn" href="#about__me">
                     <div className="arrows__img__holder">
                         <img className="arrows__img" src={DownArrows} alt="" />
                     </div>

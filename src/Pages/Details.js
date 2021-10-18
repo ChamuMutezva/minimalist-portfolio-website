@@ -22,7 +22,6 @@ const DetailsPage = () => {
     let match = useRouteMatch();
 
     const handlePrevious = () => {
-
         if (lastItem > 0) {
             setlastItem(() => lastItem - 1)
             setTargetData(data[lastItem])
@@ -31,22 +30,18 @@ const DetailsPage = () => {
             setTargetData(data[lastItem])
         }
 
-        console.log(lastItem)
     }
 
     const handleNext = () => {
 
-        console.log(lastItem)
-        console.log(data.length)
-
-        if (lastItem < data.length - 1) { 
+        if (lastItem < data.length - 1) {
             setlastItem(lastItem + 1)
             setTargetData(data[lastItem])
         } else {
             setlastItem(0)
             setTargetData(data[lastItem])
         }
-        console.log(lastItem)
+
     }
 
     useEffect(() => {
@@ -82,57 +77,62 @@ const DetailsPage = () => {
                             rel="noreferrer">View website</a>
 
                     </div>
+
+                    <div className="details__more">
+                        <h2 className="details__more--title">
+                            Project Background
+                        </h2>
+                        <p className="details__more__content">
+                            {targetData.background}
+                        </p>
+                        <h3 className="details__preview__title">
+                            Static Preview
+                        </h3>
+                        <div className="preview__images">
+                            <picture className="details__preview__img__container">
+                                <source media="(min-width: 1080px)"
+                                    srcSet={targetData.preview.desktop[1]} />
+                                <source media="(min-width: 620px)"
+                                    srcSet={targetData.preview.tablet[1]} />
+                                <img className="hero__img details__preview__img"
+                                    src={targetData.preview.mobile[1]}
+                                    alt={`the heading section static presentation of the ${targetData.project}`} />
+                            </picture>
+                            <picture className="details__preview__img__container">
+                                <source media="(min-width: 1080px)"
+                                    srcSet={targetData.preview.desktop[3]} />
+                                <source media="(min-width: 620px)"
+                                    srcSet={targetData.preview.tablet[3]} />
+                                <img className="hero__img details__preview__img"
+                                    src={targetData.preview.mobile[3]}
+                                    alt={`the main and overrall static presentation of the ${targetData.project}`} />
+                            </picture>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="details__more">
-                <h2 className="details__more--title">
-                    Project Background
-                </h2>
-                <p className="details__more__content">
-                    {targetData.background}
-                </p>
-                <h3 className="details__preview__title">
-                    Static Preview
-                </h3>
-                <div className="preview__images">
-                    <picture className="details__preview__img__container">
-                        <source media="(min-width: 1080px)"
-                            srcSet={targetData.preview.desktop[1]} />
-                        <source media="(min-width: 620px)"
-                            srcSet={targetData.preview.tablet[1]} />
-                        <img className="hero__img details__preview__img"
-                            src={targetData.preview.mobile[1]}
-                            alt={`the heading section static presentation of the ${targetData.project}`} />
-                    </picture>
-                    <picture className="details__preview__img__container">
-                        <source media="(min-width: 1080px)"
-                            srcSet={targetData.preview.desktop[3]} />
-                        <source media="(min-width: 620px)"
-                            srcSet={targetData.preview.tablet[3]} />
-                        <img className="hero__img details__preview__img"
-                            src={targetData.preview.mobile[3]}
-                            alt={`the main and overrall static presentation of the ${targetData.project}`} />
-                    </picture>
-
-                    <div className="project__nav">
-                        <div className="previous__project">
-                            <Link to={`${match.url}/:${lastItem}`} onClick={handlePrevious}>
-                                <img src={Previous} alt="" />
-                                <span className="sr__only">Previous project</span>
-                            </Link>
 
 
-                            <h3>{targetData.previous}</h3>
-                            <p>Previous project</p>
-                        </div>
-                        <div className="next__project">
-                            <Link to={`${match.url}/:${lastItem}`} onClick={handleNext}>
-                                <img src={Next} alt="" />
-                                <span className="sr__only">next project</span>
-                            </Link>
-                            <h3>{targetData.next}</h3>
-                            <p>Next project</p>
-                        </div>
+            <div className="project__nav">
+                <div className="previous__project">
+                    <Link to={`${match.url}/:${lastItem}`} onClick={handlePrevious}>
+                        <img className="project__nav__img" src={Previous} alt="" />
+                        <span className="sr__only">Previous project</span>
+                    </Link>
+
+                    <div className="project__contents">
+                        <h3 className="project__nav__title">{targetData.previous}</h3>
+                        <p className="project__nav__content">Previous project</p>
+                    </div>
+                </div>
+                <div className="next__project">
+                    <Link to={`${match.url}/:${lastItem}`} onClick={handleNext}>
+                        <img className="project__nav__img" src={Next} alt="" />
+                        <span className="sr__only">next project</span>
+                    </Link>
+                    <div className="project__contents project__contents__right">
+                        <h3 className="project__nav__title">{targetData.next}</h3>
+                        <p className="project__nav__content">Next project</p>
                     </div>
                 </div>
             </div>

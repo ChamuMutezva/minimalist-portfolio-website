@@ -1,7 +1,12 @@
 @use '../Utils';
 
 .details__content {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
+
+    @include Utils.mQ(67.5rem) {
+        display: flex;
+        gap: 2rem;
+    }
 }
 
 .details__content__title {
@@ -11,6 +16,7 @@
 .details__content__content,
 .details__more__content {
     @include Utils.mainContent;
+    margin-bottom: 1rem;
 }
 
 .details__techs__summary {
@@ -23,10 +29,16 @@
 
 .details__more {
     margin-top: 3rem;
+
+    @include Utils.mQ(67.5rem) {
+        flex: 1 1 65%;
+    }
+
 }
 
 .details__more--title,
 .details__preview__title {
+    color: Utils.$grayish-dark-blue;
     font-size: Utils.calculateRem(32);
     font-weight: 500;
 }
@@ -40,12 +52,66 @@
 }
 
 .details__content__sub {
-	border-top: 1px solid Utils.$medium-grey;
+    border-top: 1px solid Utils.$medium-grey;
     border-bottom: 1px solid Utils.$medium-grey;
     padding-bottom: 2.5rem;
+
+    @include Utils.mQ(67.5rem) {
+        flex: 1 1 35%;
+    }
 }
 
 .project__nav {
-	display: flex;
-	justify-content: space-between;
+    display: flex;
+    border-top: 1px solid Utils.$medium-grey;
+    border-bottom: 1px solid Utils.$medium-grey;
+}
+
+.previous__project,
+.next__project {
+    display: flex;
+    flex: 1 1 50%;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: .5rem;
+
+    @include Utils.mQ(42.5rem) {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.previous__project {
+    border-right: 1px solid Utils.$medium-grey;
+}
+
+.next__project {
+    align-items: flex-end;
+
+    @include Utils.mQ(42.5rem) {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
+
+.project__nav__title {
+    font-size: Utils.calculateRem(32);
+    font-weight: 500;
+    color: Utils.$grayish-dark-blue;
+    opacity: 0.8;
+}
+
+.project__nav__content {
+    color: Utils.$grayish-dark-blue;
+    opacity: 0.6;
+}
+
+.project__contents__right {
+    text-align: right;
+}
+
+.project__nav__img {
+    transform: scale(1.2);
 }

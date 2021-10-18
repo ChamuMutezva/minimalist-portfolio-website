@@ -4,7 +4,7 @@ import AboutMeDesktop from '../images/homepage/desktop/image-homepage-profile.jp
 import NavButton from './NavButton'
 const AboutMe = () => {
     return (
-        <div className="about__me">
+        <div id="about__me" className="about__me">
             <div className="about__img__container">
                 <picture>
                     <source media="(min-width: 1080px)"
@@ -28,7 +28,7 @@ const AboutMe = () => {
                         I love being out in nature whether that’s going for a walk, run or cycling. I’d love
                         you to check out my work.
                     </p>
-                    <NavButton title="go to portfolio" href="/" />
+                    <NavButton title="go to portfolio" href="/PortfolioPage" />
                 </div>
             </div>
         </div>

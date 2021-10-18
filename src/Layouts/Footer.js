@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Logo from '../images/logo.svg'
 import Github from '../images/icons/github.svg'
 import Twitter from '../images/icons/twitter.svg'
@@ -14,14 +15,14 @@ const Footer = () => {
                     {/*Modal and navigation list items*/}
                     <div className={`footer__nav__list`}>
                         <ul className="footer__nav__list__items">
-                            <li className="footer__nav__list__item">
-                                <a className="footer__nav--item" href="/">Home</a>
+                            <li className="footer__nav__list__item">                                
+                                <Link to="/" className="footer__nav--item">Home</Link>
                             </li>
-                            <li className="footer__nav__list__item">
-                                <a className="footer__nav--item" href="/">Portfolio</a>
+                            <li className="footer__nav__list__item">                                
+                                <Link to="/PortfolioPage" className="footer__nav--item">Portfolio</Link>
                             </li>
-                            <li className="footer__nav__list__item">
-                                <a className="footer__nav--item" href="/">Contact me</a>
+                            <li className="footer__nav__list__item">                               
+                                <Link to="/ContactPage" className="footer__nav--item">Contact me</Link>
                             </li>
                         </ul>
                     </div>
@@ -50,3 +51,4 @@ const Footer = () => {
     )
 }
 export default Footer
+                    
