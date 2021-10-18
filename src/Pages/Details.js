@@ -39,7 +39,7 @@ const DetailsPage = () => {
         console.log(lastItem)
         console.log(data.length)
 
-        if (lastItem < data.length - 1) {
+        if (lastItem < data.length - 1) { 
             setlastItem(lastItem + 1)
             setTargetData(data[lastItem])
         } else {
@@ -126,7 +126,7 @@ const DetailsPage = () => {
                             <p>Previous project</p>
                         </div>
                         <div className="next__project">
-                            <Link to={`${match.url}/:${targetData.id}`} onClick={handleNext}>
+                            <Link to={`${match.url}/:${lastItem}`} onClick={handleNext}>
                                 <img src={Next} alt="" />
                                 <span className="sr__only">next project</span>
                             </Link>
