@@ -50,9 +50,15 @@ const Header = () => {
                 {/*Modal and navigation list items*/}
                 <div className={`modal__container ${menu ? "hide__modal" : ""}`}>
                     <ul className="nav__list__items">
-                        <li className="nav__list__item"><Link to="/" className="nav--item">Home</Link></li>
-                        <li className="nav__list__item"><Link to="/PortfolioPage" className="nav--item">Portfolio</Link></li>
-                        <li className="nav__list__item"><Link to="/ContactPage" className="nav--item">Contact me</Link></li>
+                        <li className="nav__list__item">
+                            <Link to="/" className="nav--item">Home</Link>
+                        </li>
+                        <li className="nav__list__item">
+                            <Link to="/PortfolioPage" className="nav--item">Portfolio</Link>
+                        </li>
+                        <li className="nav__list__item">
+                            <Link to="/ContactPage" className="nav--item">Contact me</Link>
+                        </li>
                     </ul>
                 </div>
             </nav>

@@ -6,18 +6,26 @@ import Footer from './Layouts/Footer';
 import HomePage from './Pages/HomePage';
 import PortfolioPage from './Pages/PortfolioPage';
 import ContactPage from './Pages/ContactPage';
-import Aside from './Layouts/Aside';
+//import Aside from './Layouts/Aside';
 import DetailsPage from './Pages/Details';
 
 function App() {
   return (
     <div className="App">
       <Router>
+
         <Header />
+
         <Switch>
+
           <Route exact path="/">
             <HomePage />
           </Route>
+
+          <Route path="/ContactPage">
+            <ContactPage />
+          </Route>
+
           <DataProvider>
             <Route path="/PortfolioPage">
               <PortfolioPage />
@@ -26,12 +34,10 @@ function App() {
               <DetailsPage />
             </Route>
           </DataProvider>
-          <Route path="/ContactPage">
-            <ContactPage />
-          </Route>
 
         </Switch>
-        <Aside />
+
+       
         <Footer />
       </Router>
     </div>
