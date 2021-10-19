@@ -1,0 +1,58 @@
+@use '../Utils';
+
+.contact {
+    border-top: 1px solid Utils.$medium-grey;
+    padding-top: 2rem;
+}
+
+.contact__heading {
+    font-size: Utils.calculateRem(40);
+    color: Utils.$grayish-dark-blue;
+}
+
+.contact__content {
+    @include Utils.mainContent;
+}
+
+.form__heading {
+    @include Utils.headings;
+}
+
+.social__contact {
+	border-bottom: 1px solid Utils.$medium-grey;
+    padding-bottom: 2rem;
+}
+
+.social__contact__list {
+    width: 6.5rem;
+	display: flex;
+	align-items: center;
+    justify-content: space-around;
+}
+
+.input__container {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+
+.label {
+    font-size: Utils.calculateRem(13);
+    font-weight: 800;
+    color: Utils.$grayish-dark-blue;
+    margin-bottom: 1rem;
+}
+
+.inputs {
+    font-size: Utils.calculateRem(13);
+    background-color: Utils.$medium-grey;
+    padding: 1rem 0.5rem;
+    border: 1px solid transparent;
+}
+
+.textarea {
+    font-size: Utils.calculateRem(13);
+    background-color: Utils.$medium-grey;
+    padding: 1rem 0.5rem;
+    border: 1px solid transparent;
+}
