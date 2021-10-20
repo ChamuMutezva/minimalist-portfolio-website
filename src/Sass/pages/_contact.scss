@@ -1,27 +1,49 @@
 @use "sass:color";
 @use '../Utils';
 
-.contact {
+.contact__content {
+    @include Utils.mainContent;
+}
+
+.contact__social__container {
     border-top: 1px solid Utils.$medium-grey;
+    border-bottom: 1px solid Utils.$medium-grey;
     padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include Utils.mQ(67.5rem) {
+        display: flex;
+        align-items: baseline;
+    }
 }
 
 .contact__heading {
     font-size: Utils.calculateRem(40);
     color: Utils.$grayish-dark-blue;
+
+    @include Utils.mQ(67.5rem) {
+        flex: 1 1 40%;
+    }
 }
 
-.contact__content {
-    @include Utils.mainContent;
+.contact__social__divider {
+    @include Utils.mQ(67.5rem) {
+        flex: 1 1 60%;
+    }
 }
 
 .form__heading {
     @include Utils.headings;
+
+    @include Utils.mQ(67.5rem) {
+        flex: 1 1 40%;
+    }
 }
 
-.social__contact {
-    border-bottom: 1px solid Utils.$medium-grey;
-    padding-bottom: 2rem;
+.form__input__container {
+    @include Utils.mQ(67.5rem) {
+        flex: 1 1 60%;
+    }
 }
 
 .social__contact__list {
@@ -76,5 +98,14 @@
 }
 
 .form {
-	margin-bottom: 3rem;
+    margin-bottom: 3rem;
+
+    @include Utils.mQ(67.5rem) {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+.social__link--btn {
+    @include Utils.hoverFocus;
 }

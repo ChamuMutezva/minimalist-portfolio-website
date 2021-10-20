@@ -709,16 +709,6 @@ span.btn__text {
   outline-offset: 0.25em;
 }
 
-.contact {
-  border-top: 1px solid #979797;
-  padding-top: 2rem;
-}
-
-.contact__heading {
-  font-size: 2.5rem;
-  color: #33323e;
-}
-
 .contact__content {
   font-size: 1rem;
   color: #33323e;
@@ -727,15 +717,50 @@ span.btn__text {
   line-height: 1.92;
 }
 
+.contact__social__container {
+  border-top: 1px solid #979797;
+  border-bottom: 1px solid #979797;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 67.5rem) {
+  .contact__social__container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.contact__heading {
+  font-size: 2.5rem;
+  color: #33323e;
+}
+@media screen and (min-width: 67.5rem) {
+  .contact__heading {
+    flex: 1 1 40%;
+  }
+}
+
+@media screen and (min-width: 67.5rem) {
+  .contact__social__divider {
+    flex: 1 1 60%;
+  }
+}
+
 .form__heading {
   padding-top: 1.5rem;
   font-size: 2.5rem;
   color: #33323e;
 }
+@media screen and (min-width: 67.5rem) {
+  .form__heading {
+    flex: 1 1 40%;
+  }
+}
 
-.social__contact {
-  border-bottom: 1px solid #979797;
-  padding-bottom: 2rem;
+@media screen and (min-width: 67.5rem) {
+  .form__input__container {
+    flex: 1 1 60%;
+  }
 }
 
 .social__contact__list {
@@ -803,6 +828,18 @@ span.btn__text {
 
 .form {
   margin-bottom: 3rem;
+}
+@media screen and (min-width: 67.5rem) {
+  .form {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.social__link--btn:hover, .social__link--btn:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
 }
 
 h1,
