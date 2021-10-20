@@ -21,8 +21,7 @@
         padding: 3.5rem 2rem;
     }
 
-    @include Utils.mQ(67.5rem) {
-        // padding: 0.5rem 10.3125rem;
+    @include Utils.mQ(67.5rem) {       
         max-width: 69.375rem;
         margin: auto;
     }
@@ -33,10 +32,11 @@
     filter: brightness(0%) invert(100%);
 }
 
-.footer__nav--item {
+.footer__nav--btn {
     color: Utils.$white;
     text-decoration: none;
     text-transform: uppercase;
+    @include Utils.hoverFocus;
 }
 
 .footer__nav__list__items {
@@ -83,5 +83,13 @@
 .social__list {
     @include Utils.mQ(42.5rem) {
         flex: 1 1 20%;
+    }
+}
+
+.social__link--btn {
+    @include Utils.hoverFocus;
+    &:hover,
+    &:focus {      
+      outline: dashed Utils.$white;     
     }
 }

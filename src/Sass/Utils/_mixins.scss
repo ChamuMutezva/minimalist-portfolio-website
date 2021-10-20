@@ -18,3 +18,12 @@
   margin-bottom: 2rem;
   line-height: 1.92;
 }
+
+@mixin hoverFocus() {
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: dashed currentColor;
+    outline-offset: 0.25em;
+  }
+}

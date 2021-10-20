@@ -102,6 +102,11 @@ select {
   max-width: 12.5rem;
   text-decoration: none;
 }
+.btn:hover, .btn:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
+}
 
 .arrows__img__holder {
   flex: 1 1 30%;
@@ -134,6 +139,11 @@ span.btn__text {
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-align: center;
+}
+.nav__shared--btn:hover, .nav__shared--btn:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
 }
 
 .hero {
@@ -352,6 +362,11 @@ span.btn__text {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+.nav--item:hover, .nav--item:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
+}
 
 .main {
   padding: 0.5rem 2rem;
@@ -429,10 +444,15 @@ span.btn__text {
   filter: brightness(0%) invert(100%);
 }
 
-.footer__nav--item {
+.footer__nav--btn {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+}
+.footer__nav--btn:hover, .footer__nav--btn:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
 }
 
 @media screen and (min-width: 42.5rem) {
@@ -478,6 +498,15 @@ span.btn__text {
   .social__list {
     flex: 1 1 20%;
   }
+}
+
+.social__link--btn:hover, .social__link--btn:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
+}
+.social__link--btn:hover, .social__link--btn:focus {
+  outline: dashed #ffffff;
 }
 
 .project__title {
@@ -674,6 +703,12 @@ span.btn__text {
   transform: scale(1.2);
 }
 
+.next__project--btn:hover, .next__project--btn:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
+}
+
 .contact {
   border-top: 1px solid #979797;
   padding-top: 2rem;
@@ -729,12 +764,45 @@ span.btn__text {
   padding: 1rem 0.5rem;
   border: 1px solid transparent;
 }
+.inputs:hover, .inputs:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
+}
 
 .textarea {
   font-size: 0.8125rem;
   background-color: #d7d7d7;
   padding: 1rem 0.5rem;
   border: 1px solid transparent;
+  resize: none;
+}
+.textarea:hover, .textarea:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
+}
+
+.error__alert {
+  color: red;
+}
+
+.btnSend {
+  background-color: #20394c;
+  color: #ffffff;
+  border: 1px solid transparent;
+  padding: 0.9rem 3.5rem;
+  font-size: 0.75rem;
+  font-family: "Public Sans", sans-serif;
+}
+.btnSend:hover, .btnSend:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
+}
+
+.form {
+  margin-bottom: 3rem;
 }
 
 h1,

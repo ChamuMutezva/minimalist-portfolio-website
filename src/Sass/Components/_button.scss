@@ -5,6 +5,7 @@
     display: flex;
     max-width: 12.5rem;
     text-decoration: none;
+    @include Utils.hoverFocus;
 }
 
 .arrows__img__holder {
@@ -38,4 +39,5 @@ span.btn__text {
     font-size: Utils.calculateRem(12);
     letter-spacing: 2px;
     text-align: center;
+    @include Utils.hoverFocus;
 }

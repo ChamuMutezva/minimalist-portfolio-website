@@ -16,13 +16,13 @@ const Footer = () => {
                     <div className={`footer__nav__list`}>
                         <ul className="footer__nav__list__items">
                             <li className="footer__nav__list__item">                                
-                                <Link to="/" className="footer__nav--item">Home</Link>
+                                <Link to="/" className="footer__nav--btn">Home</Link>
                             </li>
                             <li className="footer__nav__list__item">                                
-                                <Link to="/PortfolioPage" className="footer__nav--item">Portfolio</Link>
+                                <Link to="/PortfolioPage" className="footer__nav--btn">Portfolio</Link>
                             </li>
                             <li className="footer__nav__list__item">                               
-                                <Link to="/ContactPage" className="footer__nav--item">Contact me</Link>
+                                <Link to="/ContactPage" className="footer__nav--btn">Contact me</Link>
                             </li>
                         </ul>
                     </div>
@@ -30,17 +30,17 @@ const Footer = () => {
                 <div className="social__list">
                     <ul className="social__list__items">
                         <li className="social__list__item">
-                            <a href="./" aria-label="preview my work on github">
+                            <a href="./" className="social__link--btn" aria-label="preview my work on github">
                                 <img className="social__icons" src={Github} alt="" aria-hidden="true" />
                             </a>
                         </li>
                         <li className="social__list__item">
-                            <a href="./" aria-label="lets connect on twitter">
+                            <a href="./" className="social__link--btn" aria-label="lets connect on twitter">
                                 <img className="social__icons" src={Twitter} alt="" aria-hidden="true" />
                             </a>
                         </li>
                         <li className="social__list__item">
-                            <a href="./" aria-label="lets connect on linkein">
+                            <a href="./" className="social__link--btn" aria-label="lets connect on linkein">
                                 <img className="social__icons" src={Linkein} alt="" aria-hidden="true" />
                             </a>
                         </li>

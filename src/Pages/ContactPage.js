@@ -176,7 +176,7 @@ const ContactPage = () => {
                     {errors.message && <small className="error__alert">{errors.message}</small>}
                 </div>
 
-                <button>Send Message</button>
+                <button className="btnSend">Send Message</button>
             </form>
 
         </main>

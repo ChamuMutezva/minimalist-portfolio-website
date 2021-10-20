@@ -7,11 +7,11 @@
   justify-content: space-between;
   align-items: center;
 
-  @include Utils.mQ(42.5rem) {  
+  @include Utils.mQ(42.5rem) {
     padding: 4.5rem 2.5rem 2rem;
   }
 
-  @include Utils.mQ(67.5rem) {  
+  @include Utils.mQ(67.5rem) {
     padding: 4.5rem 10.3125rem 2rem;
   }
 }
@@ -35,7 +35,7 @@
   align-items: first baseline;
   justify-content: space-between;
 
-  @include Utils.mQ(42.5rem) {  
+  @include Utils.mQ(42.5rem) {
     position: relative;
     top: 0;
     padding-top: 0;
@@ -47,7 +47,7 @@
 .hide__modal {
   display: none;
 
-  @include Utils.mQ(42.5rem) {  
+  @include Utils.mQ(42.5rem) {
     display: flex;
   }
 }
@@ -59,25 +59,25 @@
 }
 
 .menu__control {
-  @include Utils.mQ(42.5rem) {  
+  @include Utils.mQ(42.5rem) {
     display: none;
   }
 }
 
 .nav {
-  @include Utils.mQ(42.5rem) {  
+  @include Utils.mQ(42.5rem) {
     flex: 1 1 40%;
   }
 }
 
 .logo__container {
-  @include Utils.mQ(42.5rem) {  
+  @include Utils.mQ(42.5rem) {
     flex: 1 1 60%;
   }
 }
 
 .nav__list__items {
-  @include Utils.mQ(42.5rem) {  
+  @include Utils.mQ(42.5rem) {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -90,4 +90,6 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  @include Utils.hoverFocus;
 }

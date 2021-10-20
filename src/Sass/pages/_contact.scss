@@ -20,21 +20,21 @@
 }
 
 .social__contact {
-	border-bottom: 1px solid Utils.$medium-grey;
+    border-bottom: 1px solid Utils.$medium-grey;
     padding-bottom: 2rem;
 }
 
 .social__contact__list {
     width: 6.5rem;
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
 .input__container {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
 }
 
 .label {
@@ -49,6 +49,7 @@
     background-color: lighten(Utils.$medium-grey, 25%);
     padding: 1rem 0.5rem;
     border: 1px solid transparent;
+    @include Utils.hoverFocus;
 }
 
 .textarea {
@@ -56,4 +57,24 @@
     background-color: lighten(Utils.$medium-grey, 25%);
     padding: 1rem 0.5rem;
     border: 1px solid transparent;
+    resize: none;
+    @include Utils.hoverFocus;
+}
+
+.error__alert {
+    color: red;
+}
+
+.btnSend {
+    background-color: Utils.$dark-blue;
+    color: Utils.$white;
+    border: 1px solid transparent;
+    padding: .9rem 3.5rem;
+    font-size: Utils.calculateRem(12);
+    font-family: "Public Sans", sans-serif;
+    @include Utils.hoverFocus;
+}
+
+.form {
+	margin-bottom: 3rem;
 }
