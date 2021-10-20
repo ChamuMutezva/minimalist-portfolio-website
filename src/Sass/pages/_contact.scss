@@ -1,3 +1,4 @@
+@use "sass:color";
 @use '../Utils';
 
 .contact {
@@ -45,14 +46,14 @@
 
 .inputs {
     font-size: Utils.calculateRem(13);
-    background-color: Utils.$medium-grey;
+    background-color: lighten(Utils.$medium-grey, 25%);
     padding: 1rem 0.5rem;
     border: 1px solid transparent;
 }
 
 .textarea {
     font-size: Utils.calculateRem(13);
-    background-color: Utils.$medium-grey;
+    background-color: lighten(Utils.$medium-grey, 25%);
     padding: 1rem 0.5rem;
     border: 1px solid transparent;
 }

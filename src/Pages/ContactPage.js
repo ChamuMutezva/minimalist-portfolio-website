@@ -4,7 +4,12 @@ const ContactPage = () => {
     const initState = {
         fullName: '',
         email: '',
-        message: ''
+        message: '',
+        touched: {
+            fullName: false,
+            email: false,
+            message: false,
+        }
     }
     // TO investigate why: the name value of the input element must be
     // correspond to the names in the initSate object above
@@ -16,6 +21,11 @@ const ContactPage = () => {
         console.log(value)
         setFormData({ ...formData, [name]: value })
     }
+
+    const onBlur = (e) => {
+        const { name } = e.target
+        setFormData({ ...formData, touched: { ...formData.touched, [name]: true } })
+      }
 
     const onSubmit = (e) => {        /* 
          e.preventDefault()
@@ -30,6 +40,44 @@ const ContactPage = () => {
          */
         console.log(formData)
     }
+
+    const validate = () => {
+        const validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        // Object to collect error feedback and to display on the form
+        const errors = {
+            fullName: '',
+            email: '',
+            message: '',
+        }
+
+        //validate fullname
+        if (
+            (formData.touched.fullName && formData.fullName.length <= 0) ||
+            (formData.touched.fullName && formData.fullName.length > 30)
+        ) {
+            errors.fullName = 'First name must be between 3 and 30'
+        }
+
+        //validate email
+        if ((formData.touched.email && formData.email.length <= 0)) {
+            errors.email = 'Email cannot be empty'
+        }
+
+        if ((formData.touched.email && !formData.email.match(validEmail))) {
+            errors.email = 'Please use a valid email address'
+        }
+
+        //validate message
+        if (
+            (formData.touched.message && formData.message.length < 5) ||
+            (formData.touched.message && formData.message.length > 50)
+        ) {
+            errors.message = 'Message  must be between 5 and 50'
+        }
+        return errors
+    }
+
+    const errors = validate()
 
     const { fullName, email, message } = formData
 
@@ -91,9 +139,12 @@ const ContactPage = () => {
                         placeholder="Chamu mutezva"
                         value={fullName}
                         onChange={onChange}
+                        onBlur={onBlur}
                         required
                     />
+                    {errors.fullName && <small className="error__alert">{errors.fullName}</small>}
                 </div>
+
                 <div className="input__container email__container">
                     <label className="label" htmlFor="email">Email</label>
                     <input type="email"
@@ -103,9 +154,12 @@ const ContactPage = () => {
                         placeholder="ckmutezva@gmail.com"
                         value={email}
                         onChange={onChange}
+                        onBlur={onBlur}
                         required
                     />
+                    {errors.email && <small className="error__alert">{errors.email}</small>}
                 </div>
+
                 <div className="input__container message__container">
                     <label className="label" htmlFor="message">Message</label>
                     <textarea
@@ -116,9 +170,10 @@ const ContactPage = () => {
                         name="message"
                         placeholder="message"
                         onChange={onChange}
+                        onBlur={onBlur}
                         value={message}>
                     </textarea>
-
+                    {errors.message && <small className="error__alert">{errors.message}</small>}
                 </div>
 
                 <button>Send Message</button>

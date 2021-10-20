@@ -674,6 +674,69 @@ span.btn__text {
   transform: scale(1.2);
 }
 
+.contact {
+  border-top: 1px solid #979797;
+  padding-top: 2rem;
+}
+
+.contact__heading {
+  font-size: 2.5rem;
+  color: #33323e;
+}
+
+.contact__content {
+  font-size: 1rem;
+  color: #33323e;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.92;
+}
+
+.form__heading {
+  padding-top: 1.5rem;
+  font-size: 2.5rem;
+  color: #33323e;
+}
+
+.social__contact {
+  border-bottom: 1px solid #979797;
+  padding-bottom: 2rem;
+}
+
+.social__contact__list {
+  width: 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.label {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: #33323e;
+  margin-bottom: 1rem;
+}
+
+.inputs {
+  font-size: 0.8125rem;
+  background-color: #d7d7d7;
+  padding: 1rem 0.5rem;
+  border: 1px solid transparent;
+}
+
+.textarea {
+  font-size: 0.8125rem;
+  background-color: #d7d7d7;
+  padding: 1rem 0.5rem;
+  border: 1px solid transparent;
+}
+
 h1,
 h2,
 h3 {
