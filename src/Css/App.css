@@ -295,13 +295,11 @@ span.btn__text {
 
 .modal__container {
   position: absolute;
-  top: 4rem;
+  top: 5.5rem;
   right: 3rem;
   z-index: 1;
-  padding-top: 3rem;
-  padding-left: 2rem;
-  padding-bottom: 3rem;
-  padding-right: 2rem;
+  padding: 2rem;
+  width: 60%;
   background-color: #33323e;
 }
 @media screen and (min-width: 42.5rem) {
@@ -313,11 +311,13 @@ span.btn__text {
     padding-top: 0;
     padding-left: 0;
     flex-direction: row;
+    width: 100%;
   }
 }
 
 .nav__list__item {
   margin-bottom: 1rem;
+  text-align: center;
 }
 @media screen and (min-width: 42.5rem) {
   .nav__list__item {
@@ -781,7 +781,7 @@ span.btn__text {
 }
 
 .social__contact__list {
-  width: 6.5rem;
+  width: 7.5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;

@@ -27,17 +27,11 @@
 
 .modal__container {
   position: absolute;
-  top: 4rem;
+  top: 5.5rem;
   right: 3rem;
   z-index: 1;
-  padding-top: 3rem;
-  padding-left: 2rem;
-  padding-bottom: 3rem;
-  padding-right: 2rem;
-  //display: flex;
-  // flex-direction: column;
-  // align-items: first baseline;
-  // justify-content: space-between;
+  padding: 2rem;
+  width: 60%;
   background-color: Utils.$grayish-dark-blue;
 
 
@@ -49,11 +43,13 @@
     padding-top: 0;
     padding-left: 0;
     flex-direction: row;
+    width: 100%;
   }
 }
 
 .nav__list__item {
   margin-bottom: 1rem;
+  text-align: center;
 
   @include Utils.mQ(42.5rem) {
     margin-bottom: 0;
