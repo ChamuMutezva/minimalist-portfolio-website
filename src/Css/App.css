@@ -517,12 +517,12 @@ span.btn__text {
   }
 }
 
-.social__link--btn:hover, .social__link--btn:focus {
+.social__list__item .social__link--btn:hover, .social__list__item .social__link--btn:focus {
   cursor: pointer;
   outline: dashed currentColor;
   outline-offset: 0.25em;
 }
-.social__link--btn:hover, .social__link--btn:focus {
+.social__list__item .social__link--btn:hover, .social__list__item .social__link--btn:focus {
   outline: dashed #ffffff;
 }
 

@@ -21,7 +21,7 @@
         padding: 3.5rem 2rem;
     }
 
-    @include Utils.mQ(67.5rem) {       
+    @include Utils.mQ(67.5rem) {
         max-width: 69.375rem;
         margin: auto;
     }
@@ -86,10 +86,13 @@
     }
 }
 
-.social__link--btn {
-    @include Utils.hoverFocus;
-    &:hover,
-    &:focus {      
-      outline: dashed Utils.$white;     
+.social__list__item {
+    .social__link--btn {
+        @include Utils.hoverFocus;
+
+        &:hover,
+        &:focus {
+            outline: dashed Utils.$white;
+        }
     }
 }
