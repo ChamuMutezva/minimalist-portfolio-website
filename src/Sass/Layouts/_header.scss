@@ -9,6 +9,8 @@
 
   @include Utils.mQ(42.5rem) {
     padding: 4.5rem 2.5rem 2rem;
+    align-items: flex-start;
+
   }
 
   @include Utils.mQ(67.5rem) {
@@ -26,21 +28,36 @@
 .modal__container {
   position: absolute;
   top: 4rem;
-  left: 0;
+  right: 3rem;
   z-index: 1;
-  padding-top: 4rem;
+  padding-top: 3rem;
   padding-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: first baseline;
-  justify-content: space-between;
+  padding-bottom: 3rem;
+  padding-right: 2rem;
+  //display: flex;
+  // flex-direction: column;
+  // align-items: first baseline;
+  // justify-content: space-between;
+  background-color: Utils.$grayish-dark-blue;
+
 
   @include Utils.mQ(42.5rem) {
+    background-color: Utils.$white;
     position: relative;
     top: 0;
+    right: 0;
     padding-top: 0;
     padding-left: 0;
     flex-direction: row;
+  }
+}
+
+.nav__list__item {
+  margin-bottom: 1rem;
+
+  @include Utils.mQ(42.5rem) {
+    margin-bottom: 0;
+    margin-right: 1rem;
   }
 }
 
@@ -86,10 +103,14 @@
 
 .nav--item {
   text-decoration: none;
-  color: Utils.$grayish-dark-blue;
+  color: Utils.$white;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 
   @include Utils.hoverFocus;
+
+  @include Utils.mQ(42.5rem) {
+    color: Utils.$grayish-dark-blue;
+  }
 }

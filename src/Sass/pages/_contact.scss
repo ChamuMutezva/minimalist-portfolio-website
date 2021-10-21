@@ -84,7 +84,8 @@
 }
 
 .error__alert {
-    color: red;
+    color: Utils.$bright-red;
+    margin-top: .5rem;
 }
 
 .btnSend {
@@ -95,6 +96,10 @@
     font-size: Utils.calculateRem(12);
     font-family: "Public Sans", sans-serif;
     @include Utils.hoverFocus;
+    &:hover,
+    &:focus {     
+      outline: dashed Utils.$dark-blue;     
+    }
 }
 
 .form {

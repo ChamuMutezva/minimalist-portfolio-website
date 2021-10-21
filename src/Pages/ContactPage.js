@@ -125,7 +125,7 @@ const ContactPage = () => {
                 </div>
             </div>
 
-            <form className="form" onSubmit={onSubmit}>
+            <form aria-live="polite" className="form" onSubmit={onSubmit}>
                 <h2 className="form__heading"> Contact Me </h2>
                 <div className="form__input__container">
                     <div className="input__container name__container">
