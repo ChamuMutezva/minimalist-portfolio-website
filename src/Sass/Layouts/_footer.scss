@@ -86,13 +86,12 @@
     }
 }
 
-.social__list__item {
-    .social__link--btn {
-        @include Utils.hoverFocus;
 
-        &:hover,
-        &:focus {
-            outline: dashed Utils.$white;
-        }
+.social__link--btn {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      outline: dashed Utils.$white;
+      outline-offset: 0.25em;
     }
 }

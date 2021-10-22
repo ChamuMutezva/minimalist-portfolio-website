@@ -111,6 +111,10 @@
     }
 }
 
-.social__link--btn {
+.contact__social__link--btn {
     @include Utils.hoverFocus;
+    &:hover,
+    &:focus {     
+      outline: dashed Utils.$dark-blue;     
+    }
 }

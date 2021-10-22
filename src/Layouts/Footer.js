@@ -40,7 +40,7 @@ const Footer = () => {
                             </a>
                         </li>
                         <li className="social__list__item">
-                            <a href="./" className="social__link--btn" aria-label="lets connect on linkein">
+                            <a href="./" className="social__link--btn"  aria-label="lets connect on linkein">
                                 <img className="social__icons" src={Linkein} alt="" aria-hidden="true" />
                             </a>
                         </li>

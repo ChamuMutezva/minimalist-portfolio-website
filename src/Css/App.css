@@ -517,13 +517,10 @@ span.btn__text {
   }
 }
 
-.social__list__item .social__link--btn:hover, .social__list__item .social__link--btn:focus {
+.social__link--btn:hover, .social__link--btn:focus {
   cursor: pointer;
-  outline: dashed currentColor;
-  outline-offset: 0.25em;
-}
-.social__list__item .social__link--btn:hover, .social__list__item .social__link--btn:focus {
   outline: dashed #ffffff;
+  outline-offset: 0.25em;
 }
 
 .project__title {
@@ -857,10 +854,13 @@ span.btn__text {
   }
 }
 
-.social__link--btn:hover, .social__link--btn:focus {
+.contact__social__link--btn:hover, .contact__social__link--btn:focus {
   cursor: pointer;
   outline: dashed currentColor;
   outline-offset: 0.25em;
+}
+.contact__social__link--btn:hover, .contact__social__link--btn:focus {
+  outline: dashed #20394c;
 }
 
 h1,
