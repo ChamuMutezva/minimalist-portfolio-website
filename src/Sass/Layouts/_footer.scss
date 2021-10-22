@@ -88,10 +88,14 @@
 
 
 .social__link--btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &:hover,
     &:focus {
-      cursor: pointer;
-      outline: dashed Utils.$white;
-      outline-offset: 0.25em;
+        cursor: pointer;
+        outline: dashed Utils.$white;
+        outline-offset: 0.25em;
     }
 }

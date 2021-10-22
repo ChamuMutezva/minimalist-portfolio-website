@@ -517,6 +517,11 @@ span.btn__text {
   }
 }
 
+.social__link--btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .social__link--btn:hover, .social__link--btn:focus {
   cursor: pointer;
   outline: dashed #ffffff;
