@@ -410,6 +410,7 @@ span.btn__text {
   .aside {
     flex-direction: row;
     justify-content: space-around;
+    gap: 2rem;
   }
 }
 
@@ -423,7 +424,27 @@ span.btn__text {
 }
 @media screen and (min-width: 42.5rem) {
   .aside__title {
+    flex: 1 1 60%;
     margin-bottom: 0;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .aside__title {
+    flex: 1 1 40%;
+  }
+}
+
+@media screen and (min-width: 42.5rem) {
+  .aside__divider {
+    flex: 1 1 20%;
+    height: 1px;
+    background-color: #33323e;
+  }
+}
+@media screen and (min-width: 67.5rem) {
+  .aside__divider {
+    flex: 1 1 50%;
   }
 }
 

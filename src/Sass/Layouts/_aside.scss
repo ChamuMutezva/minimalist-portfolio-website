@@ -9,7 +9,12 @@
     @include Utils.mQ(42.5rem) {
         flex-direction: row;
         justify-content: space-around;
+        //padding: 5rem 0;
+        gap: 2rem;       
     }
+   // @include Utils.mQ(67.5rem) {  
+     //   padding: 0.5rem 10.3125rem;
+    //}
 }
 
 .aside__title {
@@ -21,6 +26,24 @@
     margin-bottom: 2rem;
 
     @include Utils.mQ(42.5rem) {
+        flex: 1 1 60%;
         margin-bottom: 0;
+        text-align: left;
+    }
+
+    @include Utils.mQ(67.5rem) {
+        flex: 1 1 40%;
+    }
+}
+
+.aside__divider {
+    @include Utils.mQ(42.5rem) {
+        flex: 1 1 20%;
+        height: 1px;
+        background-color: Utils.$grayish-dark-blue;
+    }
+
+    @include Utils.mQ(67.5rem) {
+        flex: 1 1 50%;
     }
 }
