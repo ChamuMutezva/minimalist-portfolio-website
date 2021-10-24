@@ -69,6 +69,7 @@
 .close__menu {
   background: none;
   border: none;
+  @include Utils.hoverFocus;
 }
 
 .menu__control {

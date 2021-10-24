@@ -17,7 +17,9 @@ const Header = () => {
     return (
         <header className="header">
             <div className="logo__container">
-                <img className="logo" src={Logo} alt="my frontend portfolio" />
+                <Link to="/" className="nav--item">
+                    <img className="logo" src={Logo} alt="my frontend portfolio" />
+                </Link>
             </div>
             <nav className="nav" aria-label="main navigation">
                 {/*Opening and closing the menu */}
@@ -51,13 +53,13 @@ const Header = () => {
                 <div className={`modal__container ${menu ? "hide__modal" : ""}`}>
                     <ul className="nav__list__items">
                         <li className="nav__list__item">
-                            <Link to="/" className="nav--item">Home</Link>
+                            <Link to="/" className="nav--item"  onClick={handleClick}>Home</Link>
                         </li>
                         <li className="nav__list__item">
-                            <Link to="/PortfolioPage" className="nav--item">Portfolio</Link>
+                            <Link to="/PortfolioPage" className="nav--item"  onClick={handleClick}>Portfolio</Link>
                         </li>
                         <li className="nav__list__item">
-                            <Link to="/ContactPage" className="nav--item">Contact me</Link>
+                            <Link to="/ContactPage" className="nav--item"  onClick={handleClick}>Contact me</Link>
                         </li>
                     </ul>
                 </div>
