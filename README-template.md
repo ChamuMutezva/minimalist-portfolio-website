@@ -16,8 +16,6 @@ This is a solution to the [Minimalist portfolio website challenge on Frontend Me
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -35,18 +33,11 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Frontend Mentor url: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [minimalist-portfolio-website](https://minimalist-portfolio-website.netlify.app/)
 
 ## My process
 
@@ -58,49 +49,66 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [SASS](https://sass-lang.com/) - CSS extension language
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+The form has 3 input elements that has to be filled with data and validated. The easier approach is to have a dedicated onChange event handler for each input. In this case that means having 3 repeated code of the onchange. If the form has 10 inputs then that means having 10 onchange event handlers. The second option that i eventually used envolves creating an object to host all the inputs values
 
-To see how you can add code snippets, see below:
+```JS
+ const initState = {
+        fullName: '',
+        email: '',
+        message: '',
+        touched: {
+            fullName: false,
+            email: false,
+            message: false,
+        }
+}
+
+ const [formData, setFormData] = useState(initState)
+
+  const onChange = (e) => {
+        const { name, value } = e.target          
+        setFormData({ ...formData, [name]: value })
+ }
+
+ const onBlur = (e) => {
+        const { name } = e.target
+        setFormData({ ...formData, touched: { ...formData.touched, [name]: true } })
+    }
+
+```
+Then using `useState` hook to capture the values.
+Destructuring `e.target` will among other details provide the following data
+```JS
+<input id="email" class="inputs" type="email" name="email" placeholder="ckmutezva@gmail.com" required="" value="">
+{
+​   name: "email"​​
+   value: 
+}
+```
+Take note that on `setFormData({ ...formData, [name]: value })`, `name`is written enclosed with brackets `[name]`, while the `value`is not. 
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+ <input type="text"
+                        className="inputs"
+                        id="fullname"
+                        name="fullName"
+                        placeholder="Chamu mutezva"
+                        value={fullName}
+                        onChange={onChange}
+                        onBlur={onBlur}
+                        required
+                    />
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-https://app.pluralsight.com/guides/react-context-api
+- https://app.pluralsight.com/guides/react-context-api
+- [Form with react hooks and destructuring example](https://github.com/Asabeneh/30-Days-Of-React/blob/master/22_Form_Using_Hooks/22_form_using_hooks.md)
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 

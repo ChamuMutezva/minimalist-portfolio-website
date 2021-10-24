@@ -4,11 +4,13 @@ import AboutMe from "../Components/AboutMe"
 import Aside from "../Layouts/Aside"
 const HomePage = () => {
     return (
-        <main className="main">
-            <Hero />
-            <AboutMe />   
-            <Aside />         
-        </main>
+        <>
+            <main className="main">
+                <Hero />
+                <AboutMe />
+            </main>
+            <Aside />
+        </>
     )
 }
 export default HomePage

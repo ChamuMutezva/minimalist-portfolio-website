@@ -340,6 +340,13 @@ span.btn__text {
   background: none;
   border: none;
 }
+.show__menu:hover, .show__menu:focus,
+.close__menu:hover,
+.close__menu:focus {
+  cursor: pointer;
+  outline: dashed currentColor;
+  outline-offset: 0.25em;
+}
 
 @media screen and (min-width: 42.5rem) {
   .menu__control {
@@ -706,6 +713,15 @@ span.btn__text {
     flex-direction: row;
     align-items: center;
     gap: 2rem;
+  }
+}
+
+.previous--btn {
+  align-self: flex-start;
+}
+@media screen and (min-width: 42.5rem) {
+  .previous--btn {
+    align-self: center;
   }
 }
 

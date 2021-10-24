@@ -117,7 +117,7 @@ const DetailsPage = () => {
 
                 <div className="project__nav">
                     <div className="previous__project">
-                        <Link className="next__project--btn" to={`${match.url}/:${lastItem}`} onClick={handlePrevious}>
+                        <Link className="next__project--btn previous--btn" to={`${match.url}/:${lastItem}`} onClick={handlePrevious}>
                             <img className="project__nav__img" src={Previous} alt="" />
                             <span className="sr__only">Previous project</span>
                         </Link>
@@ -128,7 +128,7 @@ const DetailsPage = () => {
                         </div>
                     </div>
                     <div className="next__project">
-                        <Link className="next__project--btn" to={`${match.url}/:${lastItem}`} onClick={handleNext}>
+                        <Link className="next__project--btn next--btn" to={`${match.url}/:${lastItem}`} onClick={handleNext}>
                             <img className="project__nav__img" src={Next} alt="" />
                             <span className="sr__only">next project</span>
                         </Link>

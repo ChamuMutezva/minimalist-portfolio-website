@@ -18,6 +18,7 @@ const FormSocials = () => {
 
     const onChange = (e) => {
         const { name, value } = e.target
+        console.log(e.target)
         console.log(name)
         console.log(value)
         setFormData({ ...formData, [name]: value })

@@ -83,6 +83,13 @@
     }
 }
 
+.previous--btn {
+    align-self: flex-start;
+    @include Utils.mQ(42.5rem) {
+        align-self: center;
+    }
+}
+
 .previous__project {
     border-right: 1px solid Utils.$medium-grey;
 }

@@ -9,19 +9,21 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer__container">
                 <div className="logo__container footer__logo__container">
-                    <img className="footer__logo" src={Logo} alt="my frontend portfolio" />
+                    <Link to="/">
+                        <img className="footer__logo" src={Logo} alt="my frontend portfolio" />
+                    </Link>
                 </div>
                 <nav className="footer__nav">
                     {/*Modal and navigation list items*/}
                     <div className={`footer__nav__list`}>
                         <ul className="footer__nav__list__items">
-                            <li className="footer__nav__list__item">                                
+                            <li className="footer__nav__list__item">
                                 <Link to="/" className="footer__nav--btn">Home</Link>
                             </li>
-                            <li className="footer__nav__list__item">                                
+                            <li className="footer__nav__list__item">
                                 <Link to="/PortfolioPage" className="footer__nav--btn">Portfolio</Link>
                             </li>
-                            <li className="footer__nav__list__item">                               
+                            <li className="footer__nav__list__item">
                                 <Link to="/ContactPage" className="footer__nav--btn">Contact me</Link>
                             </li>
                         </ul>
@@ -40,7 +42,7 @@ const Footer = () => {
                             </a>
                         </li>
                         <li className="social__list__item">
-                            <a href="./" className="social__link--btn"  aria-label="lets connect on linkein">
+                            <a href="./" className="social__link--btn" aria-label="lets connect on linkein">
                                 <img className="social__icons" src={Linkein} alt="" aria-hidden="true" />
                             </a>
                         </li>
@@ -51,4 +53,3 @@ const Footer = () => {
     )
 }
 export default Footer
-                    
