@@ -9,12 +9,13 @@
     @include Utils.mQ(42.5rem) {
         flex-direction: row;
         justify-content: space-around;
-       // padding: 5rem 2rem;
-        gap: 2rem;       
+        // padding: 5rem 2rem;
+        gap: 2rem;
     }
-   // @include Utils.mQ(67.5rem) {  
-     //   padding: 0.5rem 10.3125rem;
-    //}
+
+    @include Utils.mQ(67.5rem) {
+        padding: 5rem 10.3125rem;
+    }
 }
 
 .aside__title {
