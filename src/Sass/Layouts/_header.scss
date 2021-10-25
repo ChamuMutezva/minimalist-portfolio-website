@@ -36,7 +36,7 @@
 
 
   @include Utils.mQ(42.5rem) {
-    background-color: Utils.$white;
+    background-color: inherit;
     position: relative;
     top: 0;
     right: 0;

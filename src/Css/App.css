@@ -304,7 +304,7 @@ span.btn__text {
 }
 @media screen and (min-width: 42.5rem) {
   .modal__container {
-    background-color: #ffffff;
+    background-color: inherit;
     position: relative;
     top: 0;
     right: 0;
