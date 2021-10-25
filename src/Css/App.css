@@ -651,10 +651,20 @@ span.btn__text {
 
 .details__techs__summary {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-size: 0.8125rem;
   color: #5fb4a2;
-  margin-bottom: 2rem;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.details__techs__summary li + li {
+  position: relative;
+  border-left: 1px solid #5fb4a2;
+  padding-left: 0.5rem;
+}
+
+.details__techs__tools {
+  margin-bottom: 1.5rem;
 }
 
 .details__more {
@@ -903,6 +913,14 @@ span.btn__text {
 }
 .contact__social__link--btn:hover, .contact__social__link--btn:focus {
   outline: dashed #20394c;
+}
+
+.form__contact__section {
+  position: relative;
+}
+
+.display__success {
+  position: absolute;
 }
 
 h1,

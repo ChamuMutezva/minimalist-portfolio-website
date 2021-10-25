@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# Frontend Mentor - Minimalist portfolio website solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Minimalist portfolio website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/minimalist-portfolio-website-LMy-ZRyiE). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-### `yarn start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### The challenge
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Users should be able to:
 
-### `yarn test`
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements throughout the site
+- Click the "About Me" call-to-action on the homepage and have the screen scroll down to the next section
+- Receive an error message when the contact form is submitted if:
+  - The `Name`, `Email Address` or `Message` fields are empty should show "This field is required"
+  - The `Email Address` is not formatted correctly should show "Please use a valid email address"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `yarn build`
+![](./screenshot.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Frontend Mentor url: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [minimalist-portfolio-website](https://minimalist-portfolio-website.netlify.app/)
 
-### `yarn eject`
+## My process
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Built with
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [SASS](https://sass-lang.com/) - CSS extension language
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### What I learned
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The form has 3 input elements that has to be filled with data and validated. The easier approach is to have a dedicated onChange event handler for each input. In this case that means having 3 repeated code of the onchange. If the form has 10 inputs then that means having 10 onchange event handlers. The second option that i eventually used envolves creating an object to host all the inputs values
 
-## Learn More
+```JS
+ const initState = {
+        fullName: '',
+        email: '',
+        message: '',
+        touched: {
+            fullName: false,
+            email: false,
+            message: false,
+        }
+}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ const [formData, setFormData] = useState(initState)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  const onChange = (e) => {
+        const { name, value } = e.target          
+        setFormData({ ...formData, [name]: value })
+ }
 
-### Code Splitting
+ const onBlur = (e) => {
+        const { name } = e.target
+        setFormData({ ...formData, touched: { ...formData.touched, [name]: true } })
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+Then using `useState` hook to capture the values.
+Destructuring `e.target` will among other details provide the following data
+```JS
+<input id="email" class="inputs" type="email" name="email" placeholder="ckmutezva@gmail.com" required="" value="">
+{
+​   name: "email"​​
+   value: 
+}
+```
+Take note that on `setFormData({ ...formData, [name]: value })`, `name`is written enclosed with brackets `[name]`, while the `value`is not. 
 
-### Analyzing the Bundle Size
+```html
+ <input type="text"
+                        className="inputs"
+                        id="fullname"
+                        name="fullName"
+                        placeholder="Chamu mutezva"
+                        value={fullName}
+                        onChange={onChange}
+                        onBlur={onBlur}
+                        required
+                    />
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Useful resources
 
-### Making a Progressive Web App
+- https://app.pluralsight.com/guides/react-context-api
+- [Form with react hooks and destructuring example](https://github.com/Asabeneh/30-Days-Of-React/blob/master/22_Form_Using_Hooks/22_form_using_hooks.md)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Website - [Chamu Mutezva](https://github.com/ChamuMutezva)
+- Frontend Mentor - [@ChamuMutezva](https://www.frontendmentor.io/profile/ChamuMutezva)
+- Twitter - [@ChamuMutezva](https://twitter.com/ChamuMutezva)
 
-### Deployment
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

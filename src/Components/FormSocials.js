@@ -41,6 +41,8 @@ const FormSocials = () => {
          to send the data to the database
          */
         console.log(formData)
+        alert(`Thank you ${formData.fullName}`)
+        setFormData(initState)
     }
 
     const validate = () => {
@@ -83,59 +85,68 @@ const FormSocials = () => {
 
     const { fullName, email, message } = formData
     return (
-        <form aria-live="polite" className="form" onSubmit={onSubmit}>
-            <h2 className="form__heading"> Contact Me </h2>
-            <div className="form__input__container">
-                <div className="input__container name__container">
-                    <label className="label" htmlFor="name">Name</label>
-                    <input type="text"
-                        className="inputs"
-                        id="fullname"
-                        name="fullName"
-                        placeholder="Chamu mutezva"
-                        value={fullName}
-                        onChange={onChange}
-                        onBlur={onBlur}
-                        required
-                    />
-                    {errors.fullName && <small className="error__alert">{errors.fullName}</small>}
+        <div className="form__contact__section">
+            <form aria-live="polite" className="form" onSubmit={onSubmit}>
+                <h2 className="form__heading"> Contact Me </h2>
+                <div className="form__input__container">
+                    <div className="input__container name__container">
+                        <label className="label" htmlFor="name">Name</label>
+                        <input type="text"
+                            className="inputs"
+                            id="fullname"
+                            name="fullName"
+                            placeholder="Chamu mutezva"
+                            value={fullName}
+                            onChange={onChange}
+                            onBlur={onBlur}
+                            required
+                        />
+                        {errors.fullName && <small className="error__alert">{errors.fullName}</small>}
+                    </div>
+
+                    <div className="input__container email__container">
+                        <label className="label" htmlFor="email">Email</label>
+                        <input type="email"
+                            className="inputs"
+                            id="email"
+                            name="email"
+                            placeholder="ckmutezva@gmail.com"
+                            value={email}
+                            onChange={onChange}
+                            onBlur={onBlur}
+                            required
+                        />
+                        {errors.email && <small className="error__alert">{errors.email}</small>}
+                    </div>
+
+                    <div className="input__container message__container">
+                        <label className="label" htmlFor="message">Message</label>
+                        <textarea
+                            rows="5"
+                            cols="10"
+                            className="textarea"
+                            id="message"
+                            name="message"
+                            placeholder="message"
+                            onChange={onChange}
+                            onBlur={onBlur}
+                            value={message}>
+                        </textarea>
+                        {errors.message && <small className="error__alert">{errors.message}</small>}
+                    </div>
+
+                    <button className="btnSend">Send Message</button>
                 </div>
 
-                <div className="input__container email__container">
-                    <label className="label" htmlFor="email">Email</label>
-                    <input type="email"
-                        className="inputs"
-                        id="email"
-                        name="email"
-                        placeholder="ckmutezva@gmail.com"
-                        value={email}
-                        onChange={onChange}
-                        onBlur={onBlur}
-                        required
-                    />
-                    {errors.email && <small className="error__alert">{errors.email}</small>}
-                </div>
-
-                <div className="input__container message__container">
-                    <label className="label" htmlFor="message">Message</label>
-                    <textarea
-                        rows="5"
-                        cols="10"
-                        className="textarea"
-                        id="message"
-                        name="message"
-                        placeholder="message"
-                        onChange={onChange}
-                        onBlur={onBlur}
-                        value={message}>
-                    </textarea>
-                    {errors.message && <small className="error__alert">{errors.message}</small>}
-                </div>
-
-                <button className="btnSend">Send Message</button>
+            </form>
+            {/* 
+            <div className="display__success">
+                <h2 className="display__title">
+                    Thank you {formData.fullName}
+                </h2>
             </div>
-        </form>
-
+           */}
+        </div>
     )
 }
 export default FormSocials

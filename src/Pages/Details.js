@@ -68,10 +68,23 @@ const DetailsPage = () => {
                             <h2 className="details__content__title">{targetData.project}</h2>
                             <p className="details__content__content">{targetData.description}</p>
 
-                            <p className="details__techs__summary">
-                                <strong>{targetData.title}</strong>
-                                <strong>{targetData.techs}</strong>
-                            </p>
+                            <div className="details__techs__tools">
+
+                                <div className="details__tools">
+                                    <h3 className="sr__only">What the project provides and expectations</h3>
+                                    <ul className="details__techs__summary">
+                                        {targetData.tools.map(tool => <li><strong>{tool}</strong></li>)}
+                                    </ul>
+                                </div>
+
+                                <div className="details__tech">
+                                    <h3 className="sr__only">Technology used to build project</h3>
+                                    <ul className="details__techs__summary">
+                                        {targetData.techs.map(tech => <li><strong>{tech}</strong></li>)}
+                                    </ul>
+                                </div>
+
+                            </div>
 
                             <a className="nav__shared--btn"
                                 href={targetData.website}
@@ -139,7 +152,7 @@ const DetailsPage = () => {
                     </div>
                 </div>
             </main>
-            
+
             <Aside />
         </>
     )
