@@ -31,7 +31,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![desktop home preview](./src/images/home.png)
+![desktop portfolio preview](./src/images/portfolio.png)
+![desktop contact preview](./src/images/contact.png)
+
 
 
 ### Links
