@@ -6,19 +6,28 @@ const ContactSocials = () => {
         <div className="social__contact">
             <ul className="social__contact__list">
                 <li className="social__contact__item">
-                    <a className="social__link--btn contact__social__link--btn" href="/">
+                    <a className="social__link--btn contact__social__link--btn"
+                        href="https://github.com/ChamuMutezva"
+                        target="_blank"
+                        rel="noreferrer">
                         <Github title="My github profile page"
                             aria-label="All the projects that i have done on my github page" />
                     </a>
                 </li>
                 <li className="social__contact__item">
-                    <a className="social__link--btn contact__social__link--btn" href="/">
+                    <a className="social__link--btn contact__social__link--btn"
+                        href="https://twitter.com/ChamuMutezva"
+                        target="_blank"
+                        rel="noreferrer">
                         <Twitter title="visit me on twitter"
                             aria-label="Lets chat on twitter" />
                     </a>
                 </li>
                 <li className="social__contact__item">
-                    <a className="social__link--btn contact__social__link--btn" href="/">
+                    <a className="social__link--btn contact__social__link--btn"
+                        href="https://www.linkedin.com/in/chamumutezva/"
+                        target="_blank"
+                        rel="noreferrer">
                         <Linkedin title="linkedin page"
                             aria-label="Lets chat on linkedin" />
                     </a>

@@ -83,7 +83,8 @@ The form has 3 input elements that has to be filled with data and validated. The
 Then using `useState` hook to capture the values.
 Destructuring `e.target` will among other details provide the following data
 ```JS
-<input id="email" class="inputs" type="email" name="email" placeholder="ckmutezva@gmail.com" required="" value="">
+<input id="email" class="inputs" type="email" name="email" 
+    placeholder="ckmutezva@gmail.com" required="" value="">
 {
 ​   name: "email"​​
    value: 

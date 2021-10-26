@@ -8,8 +8,7 @@
 
     @include Utils.mQ(42.5rem) {
         flex-direction: row;
-        justify-content: space-around;
-        // padding: 5rem 2rem;
+        justify-content: space-around;       
         gap: 2rem;
     }
 
