@@ -374,22 +374,26 @@ span.btn__text {
   }
 }
 
-.nav--item {
+.nav__item--btn {
   text-decoration: none;
   color: #ffffff;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.nav--item:hover, .nav--item:focus {
+.nav__item--btn:hover, .nav__item--btn:focus {
   cursor: pointer;
   outline: dashed currentColor;
   outline-offset: 0.25em;
 }
 @media screen and (min-width: 42.5rem) {
-  .nav--item {
+  .nav__item--btn {
     color: #33323e;
   }
+}
+
+.logo__item--btn {
+  color: #33323e;
 }
 
 .main {

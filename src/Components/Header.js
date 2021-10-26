@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className="logo__container">
-                <Link to="/" className="nav--item">
+                <Link to="/" className="nav__item--btn logo__item--btn">
                     <img className="logo" src={Logo} alt="my frontend portfolio" />
                 </Link>
             </div>
@@ -53,13 +53,13 @@ const Header = () => {
                 <div className={`modal__container ${menu ? "hide__modal" : ""}`}>
                     <ul className="nav__list__items">
                         <li className="nav__list__item">
-                            <Link to="/" className="nav--item"  onClick={handleClick}>Home</Link>
+                            <Link to="/" className="nav__item--btn"  onClick={handleClick}>Home</Link>
                         </li>
                         <li className="nav__list__item">
-                            <Link to="/PortfolioPage" className="nav--item"  onClick={handleClick}>Portfolio</Link>
+                            <Link to="/PortfolioPage" className="nav__item--btn"  onClick={handleClick}>Portfolio</Link>
                         </li>
                         <li className="nav__list__item">
-                            <Link to="/ContactPage" className="nav--item"  onClick={handleClick}>Contact me</Link>
+                            <Link to="/ContactPage" className="nav__item--btn"  onClick={handleClick}>Contact me</Link>
                         </li>
                     </ul>
                 </div>

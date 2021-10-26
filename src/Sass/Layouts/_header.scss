@@ -98,7 +98,7 @@
   }
 }
 
-.nav--item {
+.nav__item--btn {
   text-decoration: none;
   color: Utils.$white;
   font-size: 0.75rem;
@@ -110,4 +110,8 @@
   @include Utils.mQ(42.5rem) {
     color: Utils.$grayish-dark-blue;
   }
+}
+
+.logo__item--btn {
+  color: Utils.$grayish-dark-blue;
 }

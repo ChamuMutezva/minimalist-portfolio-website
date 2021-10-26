@@ -56,7 +56,23 @@ Users should be able to:
 
 ### What I learned
 
-The form has 3 input elements that has to be filled with data and validated. The easier approach is to have a dedicated onChange event handler for each input. In this case that means having 3 repeated code of the onchange. If the form has 10 inputs then that means having 10 onchange event handlers. The second option that i eventually used envolves creating an object to host all the inputs values
+- Using an SVG as a React component in react.
+Further reading [How to use SVGs in React](https://blog.logrocket.com/how-to-use-svgs-in-react/)
+
+```JSX 
+import {ReactComponent as Logo} from './logo.svg';
+
+const App = () => {
+  return (
+    <div className="App">
+      <Logo />
+    </div>
+  );
+}
+export default App;
+```
+
+- The form has 3 input elements that has to be filled with data and validated. The easier approach is to have a dedicated onChange event handler for each input. In this case that means having 3 repeated code of the onchange. If the form has 10 inputs then that means having 10 onchange event handlers. The second option that i eventually used envolves creating an object to host all the inputs values
 
 ```JS
  const initState = {
