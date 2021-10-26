@@ -63,6 +63,7 @@ const DetailsPage = () => {
                         <img className="hero__img heroes__img" src={targetData.heroes.mobile[1]}
                             alt={`overview presentation of the ${targetData.project} project`} />
                     </picture>
+
                     <div className="details__content">
                         <div className="details__content__sub">
                             <h2 className="details__content__title">{targetData.project}</h2>
@@ -73,14 +74,14 @@ const DetailsPage = () => {
                                 <div className="details__tools">
                                     <h3 className="sr__only">What the project provides and expectations</h3>
                                     <ul className="details__techs__summary">
-                                        {targetData.tools.map(tool => <li><strong>{tool}</strong></li>)}
+                                        {targetData.tools.map(tool => <li key={tool}><strong>{tool}</strong></li>)}
                                     </ul>
                                 </div>
 
                                 <div className="details__tech">
                                     <h3 className="sr__only">Technology used to build project</h3>
                                     <ul className="details__techs__summary">
-                                        {targetData.techs.map(tech => <li><strong>{tech}</strong></li>)}
+                                        {targetData.techs.map(tech => <li key={tech}><strong>{tech}</strong></li>)}
                                     </ul>
                                 </div>
 

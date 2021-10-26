@@ -26,7 +26,7 @@ const Header = () => {
                 <div className="menu__control">
                     <button className="show__menu"
                         aria-label="open navigation"
-                        aria-expanded="false"
+                        aria-expanded={!menu}
                         onClick={handleClick}>
 
                         <img className="menu__img"
@@ -37,7 +37,7 @@ const Header = () => {
 
                     <button className={`close__menu hide__btn`}
                         aria-label="close the navigation"
-                        aria-expanded="true"
+                        aria-expanded={!menu}
                         onClick={handleClick}>
 
                         <img className="menu__img"
