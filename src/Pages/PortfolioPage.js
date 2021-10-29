@@ -17,10 +17,12 @@ const PortfolioPage = () => {
 
                             <picture className="project__img__container">
                                 <source media="(min-width: 1080px)"
-                                    srcSet={item.images.desktop[1]} />
+                                    srcSet={`${item.images.desktop[0]}, ${item.images.desktop[1]} 2x`} />
                                 <source media="(min-width: 620px)"
-                                    srcSet={item.images.tablet[1]} />
-                                <img className="hero__img" src={item.images.mobile[1]} alt="" />
+                                    srcSet={`${item.images.tablet[0]}, ${item.images.tablet[1]} 2x`} />
+                                <source media="(max-width: 619px)"
+                                    srcSet={`${item.images.mobile[0]}, ${item.images.mobile[1]} 2x`} />
+                                <img className="hero__img" src={`${item.images.mobile[0]}, ${item.images.mobile[1]} 2x`} alt="" />
                             </picture>
 
                             <div className="project__details">

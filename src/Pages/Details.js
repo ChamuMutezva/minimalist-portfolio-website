@@ -57,11 +57,18 @@ const DetailsPage = () => {
                 <div className="heroes__item">
                     <picture className="heroes__img__container">
                         <source media="(min-width: 1080px)"
-                            srcSet={targetData.heroes.desktop[1]} />
+                            srcSet={`${targetData.heroes.desktop[0]}, ${targetData.heroes.desktop[1]} 2x`}
+                        />
                         <source media="(min-width: 620px)"
-                            srcSet={targetData.heroes.tablet[1]} />
-                        <img className="hero__img heroes__img" src={targetData.heroes.mobile[1]}
-                            alt={`overview presentation of the ${targetData.project} project`} />
+                            srcSet={`${targetData.heroes.tablet[0]}, ${targetData.heroes.tablet[1]} 2x`}
+                        />
+                        <source media="(max-width: 619px)"
+                            srcSet={`${targetData.heroes.mobile[0]}, ${targetData.heroes.mobile[1]} 2x`}
+                        />
+                        <img className="hero__img heroes__img"
+                            src={`${targetData.heroes.mobile[0]}, ${targetData.heroes.mobile[1]} 2x`}
+                            alt={`overview presentation of the ${targetData.project} project`}
+                        />
                     </picture>
 
                     <div className="details__content">
@@ -107,21 +114,33 @@ const DetailsPage = () => {
                             <div className="preview__images">
                                 <picture className="details__preview__img__container">
                                     <source media="(min-width: 1080px)"
-                                        srcSet={targetData.preview.desktop[1]} />
+                                        srcSet={`${targetData.preview.desktop[0]}, ${targetData.preview.desktop[1]} 2x`}
+                                    />
                                     <source media="(min-width: 620px)"
-                                        srcSet={targetData.preview.tablet[1]} />
+                                        srcSet={`${targetData.preview.tablet[0]}, ${targetData.preview.tablet[1]} 2x`}
+                                    />
+                                    <source media="(max-width: 619px)"
+                                        srcSet={`${targetData.preview.mobile[0]}, ${targetData.preview.mobile[1]} 2x`}
+                                    />
                                     <img className="hero__img details__preview__img"
-                                        src={targetData.preview.mobile[1]}
-                                        alt={`the heading section static presentation of the ${targetData.project}`} />
+                                        src={`${targetData.preview.mobile[0]}, ${targetData.preview.mobile[1]} 2x`}
+                                        alt={`the heading section static presentation of the ${targetData.project}`}
+                                    />
                                 </picture>
                                 <picture className="details__preview__img__container">
                                     <source media="(min-width: 1080px)"
-                                        srcSet={targetData.preview.desktop[3]} />
+                                        srcSet={`${targetData.preview.desktop[2]}, ${targetData.preview.desktop[3]} 2x`}
+                                    />
                                     <source media="(min-width: 620px)"
-                                        srcSet={targetData.preview.tablet[3]} />
+                                        srcSet={`${targetData.preview.tablet[2]}, ${targetData.preview.tablet[3]} 2x`}
+                                    />
+                                    <source media="(max-width: 619px)"
+                                        srcSet={`${targetData.preview.mobile[2]}, ${targetData.preview.mobile[3]} 2x`}
+                                    />
                                     <img className="hero__img details__preview__img"
-                                        src={targetData.preview.mobile[3]}
-                                        alt={`the main and overrall static presentation of the ${targetData.project}`} />
+                                        src={`${targetData.preview.mobile[2]}, ${targetData.preview.mobile[3]} 2x`}
+                                        alt={`the main and overrall static presentation of the ${targetData.project}`}
+                                    />
                                 </picture>
                             </div>
                         </div>

@@ -1,6 +1,9 @@
 import AboutMeMobile from '../images/homepage/mobile/image-homepage-profile.jpg'
+import AboutMeMobile2 from '../images/homepage/mobile/image-homepage-profile@2x.jpg'
 import AboutMeTablet from '../images/homepage/tablet/image-homepage-profile.jpg'
+import AboutMeTablet2 from '../images/homepage/tablet/image-homepage-profile@2x.jpg'
 import AboutMeDesktop from '../images/homepage/desktop/image-homepage-profile.jpg'
+import AboutMeDesktop2 from '../images/homepage/desktop/image-homepage-profile@2x.jpg'
 import NavButton from './NavButton'
 const AboutMe = () => {
     return (
@@ -8,10 +11,12 @@ const AboutMe = () => {
             <div className="about__img__container">
                 <picture>
                     <source media="(min-width: 1080px)"
-                        srcSet={AboutMeDesktop} />
+                        srcSet={`${AboutMeDesktop}, ${AboutMeDesktop2} 2x`}/>
                     <source media="(min-width: 620px)"
-                        srcSet={AboutMeTablet} />
-                    <img className="about__img" src={AboutMeMobile} alt="" />
+                        srcSet={`${AboutMeTablet}, ${AboutMeTablet2} 2x`} />
+                    <source media="(max-width: 619px)"
+                        srcSet={`${AboutMeMobile}, ${AboutMeMobile2} 2x`} />
+                    <img className="about__img" src={`${AboutMeMobile}, ${AboutMeMobile2} 2x`} alt="" />
                 </picture>
             </div>
             <div className="about__content">

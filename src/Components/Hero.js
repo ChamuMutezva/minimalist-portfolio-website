@@ -1,6 +1,9 @@
 import HeroMobile from '../images/homepage/mobile/image-homepage-hero.jpg'
+import HeroMobile2 from '../images/homepage/mobile/image-homepage-hero@2x.jpg'
 import HeroTablet from '../images/homepage/tablet/image-homepage-hero.jpg'
+import HeroTablet2 from '../images/homepage/tablet/image-homepage-hero@2x.jpg'
 import HeroDesktop from '../images/homepage/desktop/image-homepage-hero.jpg'
+import HeroDesktop2 from '../images/homepage/desktop/image-homepage-hero@2x.jpg'
 import DownArrows from '../images/icons/down-arrows.svg'
 const Hero = () => {
     return (
@@ -8,10 +11,12 @@ const Hero = () => {
             <div className="hero__img__container">
                 <picture>
                     <source media="(min-width: 1080px)"
-                        srcSet={HeroDesktop} />
+                        srcSet={`${HeroDesktop}, ${HeroDesktop2} 2x`} />
                     <source media="(min-width: 620px)"
-                        srcSet={HeroTablet} />
-                    <img className="hero__img" src={HeroMobile} alt="" />
+                        srcSet={`${HeroTablet}, ${HeroTablet2} 2x`} />
+                    <source media="(max-width: 619px)"
+                        srcSet={`${HeroMobile}, ${HeroMobile2} 2x`} />
+                    <img className="hero__img" src={`${HeroMobile}, ${HeroMobile2} 2x`} alt="" />
                 </picture>
             </div>
             <div className="hero__content">
