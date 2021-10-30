@@ -66,7 +66,7 @@ const DetailsPage = () => {
                             srcSet={`${targetData.heroes.mobile[0]}, ${targetData.heroes.mobile[1]} 2x`}
                         />
                         <img className="hero__img heroes__img"
-                            srcSet={`${targetData.heroes.mobile[0]}, ${targetData.heroes.mobile[1]} 2x`}
+                            src={`${targetData.heroes.mobile[0]}, ${targetData.heroes.mobile[1]} 2x`}
                             alt={`overview presentation of the ${targetData.project} project`}
                         />
                     </picture>
@@ -123,7 +123,7 @@ const DetailsPage = () => {
                                         srcSet={`${targetData.preview.mobile[0]}, ${targetData.preview.mobile[1]} 2x`}
                                     />
                                     <img className="hero__img details__preview__img"
-                                        srcSet={`${targetData.preview.mobile[0]}, ${targetData.preview.mobile[1]} 2x`}
+                                        src={`${targetData.preview.mobile[0]}, ${targetData.preview.mobile[1]} 2x`}
                                         alt={`the heading section static presentation of the ${targetData.project}`}
                                     />
                                 </picture>
@@ -138,7 +138,7 @@ const DetailsPage = () => {
                                         srcSet={`${targetData.preview.mobile[2]}, ${targetData.preview.mobile[3]} 2x`}
                                     />
                                     <img className="hero__img details__preview__img"
-                                        srcSet={`${targetData.preview.mobile[2]}, ${targetData.preview.mobile[3]} 2x`}
+                                        src={`${targetData.preview.mobile[2]}, ${targetData.preview.mobile[3]} 2x`}
                                         alt={`the main and overrall static presentation of the ${targetData.project}`}
                                     />
                                 </picture>

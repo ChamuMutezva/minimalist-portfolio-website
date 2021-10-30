@@ -16,7 +16,7 @@ const AboutMe = () => {
                         srcSet={`${AboutMeTablet}, ${AboutMeTablet2} 2x`} />
                     <source media="(max-width: 619px)"
                         srcSet={`${AboutMeMobile}, ${AboutMeMobile2} 2x`} />
-                    <img className="about__img" srcSet={`${AboutMeMobile}, ${AboutMeMobile2} 2x`} alt="" />
+                    <img className="about__img" src={`${AboutMeMobile}, ${AboutMeMobile2} 2x`} alt="" />
                 </picture>
             </div>
             <div className="about__content">
