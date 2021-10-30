@@ -66,7 +66,7 @@ const DetailsPage = () => {
                             srcSet={`${targetData.heroes.mobile[0]}, ${targetData.heroes.mobile[1]} 2x`}
                         />
                         <img className="hero__img heroes__img"
-                            src={`${targetData.heroes.mobile[0]}, ${targetData.heroes.mobile[1]} 2x`}
+                            src={`${targetData.heroes.mobile[0]}`}
                             alt={`overview presentation of the ${targetData.project} project`}
                         />
                     </picture>
@@ -123,7 +123,7 @@ const DetailsPage = () => {
                                         srcSet={`${targetData.preview.mobile[0]}, ${targetData.preview.mobile[1]} 2x`}
                                     />
                                     <img className="hero__img details__preview__img"
-                                        src={`${targetData.preview.mobile[0]}, ${targetData.preview.mobile[1]} 2x`}
+                                        src={`${targetData.preview.mobile[0]}`}
                                         alt={`the heading section static presentation of the ${targetData.project}`}
                                     />
                                 </picture>
@@ -138,7 +138,7 @@ const DetailsPage = () => {
                                         srcSet={`${targetData.preview.mobile[2]}, ${targetData.preview.mobile[3]} 2x`}
                                     />
                                     <img className="hero__img details__preview__img"
-                                        src={`${targetData.preview.mobile[2]}, ${targetData.preview.mobile[3]} 2x`}
+                                        src={`${targetData.preview.mobile[2]}`}
                                         alt={`the main and overrall static presentation of the ${targetData.project}`}
                                     />
                                 </picture>
