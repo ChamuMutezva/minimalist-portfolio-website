@@ -16,7 +16,7 @@ const Hero = () => {
                         srcSet={`${HeroTablet}, ${HeroTablet2} 2x`} />
                     <source media="(max-width: 619px)"
                         srcSet={`${HeroMobile}, ${HeroMobile2} 2x`} />
-                    <img className="hero__img" src={`${HeroMobile}, ${HeroMobile2} 2x`} alt="" />
+                    <img className="hero__img" srcSet={`${HeroMobile}, ${HeroMobile2} 2x`} alt="" />
                 </picture>
             </div>
             <div className="hero__content">
