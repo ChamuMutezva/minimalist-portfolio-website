@@ -1,3 +1,6 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useEffect } from "react";
 import { Link } from 'react-router-dom'
 import Logo from '../images/logo.svg'
 import Github from '../images/icons/github.svg'
@@ -5,6 +8,23 @@ import Twitter from '../images/icons/twitter.svg'
 import Linkein from '../images/icons/linkedin.svg'
 
 const Footer = () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+
+        gsap.to(".social__icons",
+            {
+                scrollTrigger: {
+                    trigger: ".social__icons",
+                    toggleActions: "restart pause reverse none",
+                },
+                ease: "back",
+                duration: 3,
+                rotation: 360,
+                stagger: 0.5,
+            })
+
+    }, [])
     return (
         <footer className="footer">
             <div className="footer__container">

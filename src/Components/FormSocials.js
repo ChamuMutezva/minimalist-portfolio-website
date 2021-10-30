@@ -29,18 +29,19 @@ const FormSocials = () => {
         setFormData({ ...formData, touched: { ...formData.touched, [name]: true } })
     }
 
-    const onSubmit = (e) => {        /* 
-         e.preventDefault()
-          stops the default behavior of form element
-         specifically refreshing of page
-         */
+    const onSubmit = (e) => {
+     /* 
+    e.preventDefault()
+     stops the default behavior of form element
+    specifically refreshing of page
+    */
         e.preventDefault()
 
         /*
          the is the place where we connect backend api 
          to send the data to the database
          */
-        console.log(formData)
+
         alert(`Thank you ${formData.fullName}`)
         setFormData(initState)
     }

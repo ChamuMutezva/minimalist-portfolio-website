@@ -6,7 +6,6 @@ import Footer from './Layouts/Footer';
 import HomePage from './Pages/HomePage';
 import PortfolioPage from './Pages/PortfolioPage';
 import ContactPage from './Pages/ContactPage';
-//import Aside from './Layouts/Aside';
 import DetailsPage from './Pages/Details';
 
 function App() {
