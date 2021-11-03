@@ -1,10 +1,27 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { DataContext } from "./DataContext"
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import NavButton from "../Components/NavButton"
 import Aside from "../Layouts/Aside"
 const PortfolioPage = () => {
-   
+
     const { data } = useContext(DataContext)
+   
+    gsap.registerPlugin(ScrollTrigger)
+    useEffect(() => {
+        gsap.from(".gsap__load",
+        {
+            scrollTrigger: ".gsap__load",
+            opacity: 0,
+            duration: .5,
+            delay: 1,
+            stagger: 0.8,
+            ease: "power4",
+        })
+
+    })
+ 
 
     return (
         <>
@@ -15,7 +32,7 @@ const PortfolioPage = () => {
                     {data.map(item => {
                         return <li className="project__list__item" key={item.id}>
 
-                            <picture className="project__img__container">
+                            <picture className="project__img__container gsap__load">
                                 <source media="(min-width: 1080px)"
                                     srcSet={`${item.images.desktop[0]}, ${item.images.desktop[1]} 2x`} />
                                 <source media="(min-width: 620px)"
@@ -25,7 +42,7 @@ const PortfolioPage = () => {
                                 <img className="hero__img" src={`${item.images.mobile[0]}`} alt="" />
                             </picture>
 
-                            <div className="project__details">
+                            <div className="project__details gsap__load">
                                 <div className="project__details__content">
                                     <h2 className="project__title">{item.project}</h2>
                                     <p className="project__content">{item.description}</p>
