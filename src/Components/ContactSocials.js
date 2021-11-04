@@ -32,7 +32,7 @@ const ContactSocials = () => {
                         target="_blank"
                         rel="noreferrer">
                         <Github title="My github profile page"
-                            
+                             className="social__icons"
                             aria-label="All the projects that i have done on my github page" />
                     </a>
                 </li>
@@ -42,7 +42,7 @@ const ContactSocials = () => {
                         target="_blank"
                         rel="noreferrer">
                         <Twitter title="visit me on twitter"
-                            
+                             className="social__icons"
                             aria-label="Lets chat on twitter" />
                     </a>
                 </li>
@@ -52,7 +52,7 @@ const ContactSocials = () => {
                         target="_blank"
                         rel="noreferrer">
                         <Linkedin title="linkedin page"
-                            
+                             className="social__icons"
                             aria-label="Lets chat on linkedin" />
                     </a>
                 </li>

@@ -12,7 +12,7 @@ const Footer = () => {
 
     useEffect(() => {
 
-        gsap.to(".social__icons",
+        gsap.to(".footer__social__icons",
             {
                 scrollTrigger: {
                     trigger: ".social__icons",
@@ -57,7 +57,7 @@ const Footer = () => {
                                 rel="noreferrer"
                                 className="social__link--btn"
                                 aria-label="preview my work on github">
-                                <img className="social__icons" src={Github} alt="" aria-hidden="true" />
+                                <img className="footer__social__icons" src={Github} alt="" aria-hidden="true" />
                             </a>
                         </li>
                         <li className="social__list__item">
@@ -66,7 +66,7 @@ const Footer = () => {
                                 rel="noreferrer"
                                 className="social__link--btn"
                                 aria-label="lets connect on twitter">
-                                <img className="social__icons" src={Twitter} alt="" aria-hidden="true" />
+                                <img className="footer__social__icons" src={Twitter} alt="" aria-hidden="true" />
                             </a>
                         </li>
                         <li className="social__list__item">
@@ -75,7 +75,7 @@ const Footer = () => {
                                 rel="noreferrer"
                                 className="social__link--btn"
                                 aria-label="lets connect on linkein">
-                                <img className="social__icons" src={Linkein} alt="" aria-hidden="true" />
+                                <img className="footer__social__icons" src={Linkein} alt="" aria-hidden="true" />
                             </a>
                         </li>
                     </ul>
